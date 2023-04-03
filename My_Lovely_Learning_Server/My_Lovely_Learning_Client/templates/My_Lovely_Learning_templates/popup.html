@@ -1,0 +1,53 @@
+{% extends 'My_Lovely_Learning_templates/base_no_user.html' %}
+
+{% block main_content %}
+
+<!-- Modal sign-in -->
+<div class="modal fade" id="exampleModal_sign-in" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog popup-sign-zone" role="document">
+        <div class="modal-content popup-sign-content">
+            <div class="modal-header popup-header">
+                <a href="#" class="popup-header-text"><span class="modal-title" id="exampleModalLabel">Войти</span></a>
+                <span class="modal-title popup-header-text" id="exampleModalLabel">/</span>
+                <a href="#" class="popup-header-text"><span class="modal-title" id="exampleModalLabel">Регистрация</span></a>
+            </div>
+            <div class="popup-body">
+                <input type="text" class="input-popup" placeholder="Логин...">
+                <input type="password" class="input-popup" placeholder="Пароль...">
+            </div>
+            <div class="modal-footer popup-footer">
+                <button type="button" class="popup-sign-button">Войти</button>
+            </div>
+            <div class="popup-social">
+                <a href="#" class="vk"><img src="../../static/My_Lovely_Learning_static/svg/vk_svg.svg" alt="vk"></a>
+                <a href="#" class="gpius"><img src="../../static/My_Lovely_Learning_static/svg/gplus_svg.svg" alt="gplus"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal sign-up -->
+<div class="modal fade" id="exampleModal_sign-up" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog popup-sign-zone" role="document">
+        <div class="modal-content popup-sign-content">
+            <div class="modal-header popup-header">
+                <a href="#" class="popup-header-text"><span class="modal-title" id="exampleModalLabel">Войти</span></a>
+                <span class="modal-title popup-header-text" id="exampleModalLabel">/</span>
+                <a href="#" class="popup-header-text"><span class="modal-title" id="exampleModalLabel">Регистрация</span></a>
+            </div>
+            <div class="popup-body">
+                <input type="text" class="input-popup" placeholder="Почта...">
+                <input type="password" class="input-popup" placeholder="Пароль...">
+            </div>
+            <div class="modal-footer popup-footer">
+                <button type="button" class="popup-sign-button">Войти</button>
+            </div>
+            <div class="popup-social">
+                <a href="#" class="vk"><img src="../../static/My_Lovely_Learning_static/svg/vk_svg.svg" alt="vk"></a>
+                <a href="#" class="gpius"><img src="../../static/My_Lovely_Learning_static/svg/gplus_svg.svg" alt="gplus"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

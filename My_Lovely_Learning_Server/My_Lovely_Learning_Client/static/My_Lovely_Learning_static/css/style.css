@@ -1,0 +1,378 @@
+/* inter-regular - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/inter-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+    --color-dark: #2C2C2C;
+    --color-main: #BCBCBC;
+    --color-interactiv: #006DBA;
+    --color-wight: #FFF;
+    --color-header-search: #555;
+    --color-black: #000;
+}
+
+* {
+    font-family: 'Inter';
+}
+
+a {
+    text-decoration-line: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h3, h5, p {
+    margin: 0;
+}
+
+/* scrollbar */
+
+body {
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+
+/* header */
+
+.container {
+    margin: 0;
+    max-width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    position: fixed;
+    background: var(--color-dark);
+}
+
+.navbar{
+    padding: 0;
+}
+
+.logo {
+    padding-left: 116px;
+}
+
+.nav-container {
+    justify-content: space-between;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.nav-container-left {
+    width: 424px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.nav-container-rigth {
+    width: 690px;
+}
+
+.nav-container-rigth,
+.nav-container-left {
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color-main);
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--color-main);
+}
+
+.input-search {
+    height: 34px;
+    width: 180px;
+    border-radius: 15px;
+    color: var(--color-main);
+    background-color: var(--color-header-search);
+    outline: none;
+    border: 0;
+    margin: 0;
+}
+
+.input-search::placeholder {
+    color: var(--color-main);
+}
+
+.form-search {
+    width: 228px;
+    height: 34px;
+    align-items: center;
+    padding-left: 7px;
+    border-radius: 15px;
+    background-color: var(--color-header-search);
+    outline: none;
+    border: 0;
+}
+
+.search-logo {
+    margin-right: 9px;
+}
+
+.input-search:active {
+    background-color: var(--color-header-search);
+}
+
+.nav-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-toggle:hover, 
+.nav-link:hover, 
+.nav-link:focus {
+    color: var(--color-main);
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+.dropdown-menu {
+    width: 160px;
+    height: 250px;
+    margin: 0;
+    background-color: var(--color-dark);
+}   
+
+.dropdown-menu.show {
+    margin: 0;
+    border: 0;
+}
+
+.dropdown-item {
+    color: var(--color-main);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.dropdown-item:hover {
+    background-color: #454545;
+    color: var(--color-interactiv);
+    padding-left: 25px;
+}
+
+.sign {
+    width: 311px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-left: 1px solid #BCBCBC;
+    border-radius: 0;
+}
+
+.btn-sign {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--color-main);
+    background-color: var(--color-dark);
+    outline: none;
+    text-align: center;
+    border: 1px solid #BCBCBC;
+    border-radius: 15px;
+}
+
+.sign-in{
+    width: 69px;
+    height: 34px;
+}
+
+.sign-up {
+    width: 130px;
+    height: 34px;
+}
+
+/* footer */
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-main);
+}
+
+.container-text-footer {
+    width: 221px;
+    height: 38px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--color-black)
+}
+
+.info{
+    color: var(--color-interactiv)
+}
+
+.left-footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    margin-bottom: 27px;
+}
+
+.nav-footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-item-footer {
+    width: 120px;
+}
+
+.nav-footer-item:not(:last-child) {
+    margin-right: 63px;
+}
+
+.nav-link-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--color-interactiv);
+}
+
+.nav-link-item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+}
+
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.store-container {
+    display: flex;
+    width: 221px;
+    height: 38px;
+    justify-content: space-around;
+}
+
+/* popup */
+
+.popup-sign-zone {
+    width: 500px;
+    height: 600px;
+}
+
+.popup-sign-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-header, .popup-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+    border: 0;
+}
+
+.popup-header-text {
+    color: var(--color-black);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.popup-header-text:not(:last-child) {
+    margin-right: 30px;
+}
+
+.popup-body {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.input-popup {
+    width: 400px;
+    height: 50px;
+    background: var(--color-main);
+    border-radius: 15px;
+    border: 0;
+    padding-left: 17px;
+    margin-bottom: 48px;
+}
+
+.input-popup::placeholder {
+    color: var(--color-black);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.popup-social {
+    display: flex;
+    width: 295px;
+    justify-content: space-between;
+}
+
+.popup-sign-button {
+    width: 100px;
+    height: 50px;
+    background-color: var(--color-interactiv);
+    color: var(--color-wight);
+    border: 0;
+    border-radius: 15px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* home */
+
+.home-container {
+    height: 900px;
+}
+
