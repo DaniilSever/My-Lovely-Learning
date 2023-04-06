@@ -23,7 +23,7 @@
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid nav-header">
                         <a href="/" class="navbar-brand logo me-lg-5">
-                            <img src="{% static 'My_Lovely_Learning_static/svg/logo.svg' %}" alt="logo">
+                            <img src="{% static 'My_Lovely_Learning_static/svg/header_svg/logo.svg' %}" alt="logo">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -40,15 +40,15 @@
                             <ul class="navbar-nav nav-container-right">
                                 <li class="nav-item me-lg-4 search-container">
                                     <form class="d-flex form-search" role="search">
-                                        <img src="{% static 'My_Lovely_Learning_static/svg/search_logo.svg' %}" alt="search" class="search-logo">
+                                        <img src="{% static 'My_Lovely_Learning_static/svg/header_svg/search_logo.svg' %}" alt="search" class="search-logo">
                                         <input class="input-search" type="search" placeholder="Поиск..." aria-label="Search">
                                     </form>
                                 </li>
                                 <li class="nav-item me-lg-4 dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="{% static 'My_Lovely_Learning_static/svg/lenguage_icon.svg' %}" alt="language icon">
+                                        <img src="{% static 'My_Lovely_Learning_static/svg/header_svg/lenguage_icon.svg' %}" alt="language icon">
                                         Русский
-                                        <img src="{% static 'My_Lovely_Learning_static/svg/Arrow_down.svg' %}" alt="arrow down">
+                                        <img src="{% static 'My_Lovely_Learning_static/svg/header_svg/Arrow_down.svg' %}" alt="arrow down">
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#" class="dropdown-item">English</a></li>
@@ -78,13 +78,13 @@
 
     <section class="popup-sign-container">
         <!-- Modal sign-in -->
-        <div class="modal fade" id="exampleModal_sign-in" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal_sign-in" tabindex="-1" role="dialog" aria-labelledby="title_sign" aria-hidden="true">
             <div class="modal-dialog popup-sign-zone" role="document">
                 <div class="modal-content popup-sign-content">
                     <div class="modal-header popup-header">
-                        <a href="#" class="popup-header-text"><span class="modal-title" id="exampleModalLabel">Войти</span></a>
-                        <span class="modal-title popup-header-text" id="exampleModalLabel">/</span>
-                        <a href="#" class="popup-header-text"><span class="modal-title" id="exampleModalLabel">Регистрация</span></a>
+                        <h1 class="modal-title popup-header-text" id="title_sign">Войти</h1>
+                        <h1 class="modal-title popup-header-text" id="title_sign">/</h1>
+                        <h1 class="modal-title popup-header-text" id="title_sign">Регистрация</h1>
                     </div>
                     <div class="popup-body">
                         <input type="text" class="input-popup" placeholder="Логин...">
@@ -94,21 +94,21 @@
                         <button type="button" class="popup-sign-button">Войти</button>
                     </div>
                     <div class="popup-social">
-                        <a href="#" class="vk"><img src="../../static/My_Lovely_Learning_static/svg/vk_svg.svg" alt="vk"></a>
-                        <a href="#" class="gpius"><img src="../../static/My_Lovely_Learning_static/svg/gplus_svg.svg" alt="gplus"></a>
+                        <a href="#" class="vk"><img src="../../static/My_Lovely_Learning_static/svg/popup_svg/vk_svg.svg" alt="vk"></a>
+                        <a href="#" class="google"><img src="../../static/My_Lovely_Learning_static/svg/popup_svg/google.svg" alt="google"></a>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Modal sign-up -->
-        <div class="modal fade" id="exampleModal_sign-up" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal_sign-up" tabindex="-1" role="dialog" aria-labelledby="title_sign" aria-hidden="true">
             <div class="modal-dialog popup-sign-zone" role="document">
                 <div class="modal-content popup-sign-content">
                     <div class="modal-header popup-header">
-                        <a href="#" class="popup-header-text"><span class="modal-title" id="exampleModalLabel">Войти</span></a>
-                        <span class="modal-title popup-header-text" id="exampleModalLabel">/</span>
-                        <a href="#" class="popup-header-text"><span class="modal-title" id="exampleModalLabel">Регистрация</span></a>
+                        <h1 class="modal-title popup-header-text" id="title_sign">Войти</h1>
+                        <h1 class="modal-title popup-header-text" id="title_sign">/</h1>
+                        <h1 class="modal-title popup-header-text" id="title_sign">Регистрация</h1>
                     </div>
                     <div class="popup-body">
                         <input type="text" class="input-popup" placeholder="Почта...">
@@ -118,8 +118,8 @@
                         <button type="button" class="popup-sign-button">Войти</button>
                     </div>
                     <div class="popup-social">
-                        <a href="#" class="vk"><img src="../../static/My_Lovely_Learning_static/svg/vk_svg.svg" alt="vk"></a>
-                        <a href="#" class="gpius"><img src="../../static/My_Lovely_Learning_static/svg/gplus_svg.svg" alt="gplus"></a>
+                        <a href="#" class="vk"><img src="../../static/My_Lovely_Learning_static/svg/popup_svg/vk_svg.svg" alt="vk"></a>
+                        <a href="#" class="google"><img src="../../static/My_Lovely_Learning_static/svg/popup_svg/google.svg" alt="google"></a>
                     </div>
                 </div>
             </div>
@@ -139,8 +139,8 @@
                         <p>и <a href="#" class="info">конфиденциальности</a></p>
                     </div>
                     <div class="store-container">
-                        <img src="{% static 'My_Lovely_Learning_static/svg/appstore.svg' %}" alt="appstore">
-                        <img src="{% static 'My_Lovely_Learning_static/svg/googleplay.svg' %}" alt="googleplay">
+                        <img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/appstore.svg' %}" alt="appstore">
+                        <img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/googleplay.svg' %}" alt="googleplay">
                     </div>
                 </div>
                 <div class="col-2">
@@ -157,9 +157,9 @@
                     <span class="copyright">© Даниил Ипатов / Кузнецов Николай</span>
                 </div>
                 <div class="col-2 social-container">
-                    <a href="#" class="social-item"><img src="{% static 'My_Lovely_Learning_static/svg/black-instagram.svg' %}" alt="instagram"></a>
-                    <a href="#" class="social-item"><img src="{% static 'My_Lovely_Learning_static/svg/black-facebook.svg' %}" alt="facebook"></a>
-                    <a href="#" class="social-item"><img src="{% static 'My_Lovely_Learning_static/svg/black-vk.svg' %}" alt="vk"></a>
+                    <a href="#" class="social-item"><img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/black-instagram.svg' %}" alt="instagram"></a>
+                    <a href="#" class="social-item"><img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/black-facebook.svg' %}" alt="facebook"></a>
+                    <a href="#" class="social-item"><img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/black-vk.svg' %}" alt="vk"></a>
                 </div>
             </div>
         </div>
