@@ -60,6 +60,7 @@ body::-webkit-scrollbar {
     width: 100%;
     position: fixed;
     background: var(--color-dark);
+    z-index: 10;
 }
 
 .navbar{
@@ -405,6 +406,9 @@ body::-webkit-scrollbar {
 /* home */
 
 .home-container {
+    display: flex;
+    align-items: center;
     height: 900px;
+    z-index: 0;
 }
 
