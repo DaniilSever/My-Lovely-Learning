@@ -1,12 +1,12 @@
-/* inter-regular - latin */
+/* source-serif-4-regular - cyrillic */
 @font-face {
-    font-family: 'Inter';
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Source Serif 4';
     font-style: normal;
     font-weight: 400;
-    src: local(''),
-        url('../fonts/inter-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+    src: url('../fonts/source-serif-4-v7-cyrillic-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/source-serif-4-v7-cyrillic-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
 
 :root {
     --color-dark: #2C2C2C;
@@ -18,7 +18,7 @@
 }
 
 * {
-    font-family: 'Inter';
+    font-family: 'Source Serif 4';
 }
 
 a {
@@ -221,7 +221,7 @@ body::-webkit-scrollbar {
 }
 
 .container-text-footer {
-    width: 221px;
+    width: 228px;
     height: 38px;
     text-align: center;
     font-style: normal;
@@ -238,14 +238,22 @@ body::-webkit-scrollbar {
 .left-footer-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     justify-content: space-around;
+    padding-right: 30px;
+}
+
+.middle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav-footer {
     display: flex;
-    justify-content: space-between;
-    width: 260px;
-    margin-bottom: 27px;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .nav-footer-item {
@@ -254,7 +262,7 @@ body::-webkit-scrollbar {
 }
 
 .left-item-footer {
-    width: 120px;
+    width: 128px;
 }
 
 .nav-footer-item:not(:last-child) {
@@ -273,13 +281,33 @@ body::-webkit-scrollbar {
     margin-bottom: 8px;
 }
 
+.copyright {
+    justify-content: center;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .social-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .social-item:not(:last-child) {
     margin-right: 10px;
+}
+
+.social-item {
+    filter: grayscale(1);
+}
+
+.social-item:hover {
+    filter: grayscale(0);
 }
 
 .store-container {
@@ -316,7 +344,7 @@ body::-webkit-scrollbar {
     color: var(--color-black);
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 29px;
 }
 
@@ -368,6 +396,10 @@ body::-webkit-scrollbar {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+}
+
+.sign-up-button {
+    width: 250px;
 }
 
 /* home */

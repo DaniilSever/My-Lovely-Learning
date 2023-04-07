@@ -5,14 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="shortcut icon" href="{% static 'My_Lovely_Learning_static/img/favicon.ico' %}" type="image/x-icon">
-
     <link rel="stylesheet" href="{% static 'My_Lovely_Learning_static/css/normalize.css' %}">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-
     <link rel="stylesheet" href="{% static 'My_Lovely_Learning_static/css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <title>My Lovely Learning</title>
 </head>
 <body>
@@ -83,8 +80,6 @@
                 <div class="modal-content popup-sign-content">
                     <div class="modal-header popup-header">
                         <h1 class="modal-title popup-header-text" id="title_sign">Войти</h1>
-                        <h1 class="modal-title popup-header-text" id="title_sign">/</h1>
-                        <h1 class="modal-title popup-header-text" id="title_sign">Регистрация</h1>
                     </div>
                     <div class="popup-body">
                         <input type="text" class="input-popup" placeholder="Логин...">
@@ -92,6 +87,7 @@
                     </div>
                     <div class="modal-footer popup-footer">
                         <button type="button" class="popup-sign-button">Войти</button>
+                        <button type="button" class="popup-sign-button sign-up-button" data-bs-toggle="modal" data-bs-target="#exampleModal_sign-up">Зарегистрироваться</button>
                     </div>
                     <div class="popup-social">
                         <a href="#" class="vk"><img src="../../static/My_Lovely_Learning_static/svg/popup_svg/vk_svg.svg" alt="vk"></a>
@@ -106,8 +102,6 @@
             <div class="modal-dialog popup-sign-zone" role="document">
                 <div class="modal-content popup-sign-content">
                     <div class="modal-header popup-header">
-                        <h1 class="modal-title popup-header-text" id="title_sign">Войти</h1>
-                        <h1 class="modal-title popup-header-text" id="title_sign">/</h1>
                         <h1 class="modal-title popup-header-text" id="title_sign">Регистрация</h1>
                     </div>
                     <div class="popup-body">
@@ -115,7 +109,8 @@
                         <input type="password" class="input-popup" placeholder="Пароль...">
                     </div>
                     <div class="modal-footer popup-footer">
-                        <button type="button" class="popup-sign-button">Войти</button>
+                        <button type="button" class="popup-sign-button"data-bs-toggle="modal" data-bs-target="#exampleModal_sign-in">Войти</button>
+                        <button type="button" class="popup-sign-button sign-up-button">Зарегистрироваться</button>
                     </div>
                     <div class="popup-social">
                         <a href="#" class="vk"><img src="../../static/My_Lovely_Learning_static/svg/popup_svg/vk_svg.svg" alt="vk"></a>
@@ -133,7 +128,7 @@
     <footer class="footer-container">
         <div class="container">
             <div class="row pt-3 justify-content-center">
-                <div class="col-2 left-footer-container">
+                <div class="col-3 left-footer-container">
                     <div class="container-text-footer">
                         Наши условия <a href="#" class="info">использования</a>
                         <p>и <a href="#" class="info">конфиденциальности</a></p>
@@ -143,7 +138,7 @@
                         <img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/googleplay.svg' %}" alt="googleplay">
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-3 middle-container">
                     <div class="nav-footer">
                         <div class="nav-footer-item left-item-footer">
                             <a href="#" class="nav-link-item">Авторам курсов</a>
@@ -154,12 +149,18 @@
                             <a href="#" class="nav-link-item">Помощь</a>
                         </div>
                     </div>
-                    <span class="copyright">© Даниил Ипатов / Кузнецов Николай</span>
+                    <h1 class="copyright">© Даниил Ипатов / Кузнецов Николай</h1>
                 </div>
-                <div class="col-2 social-container">
-                    <a href="#" class="social-item"><img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/black-instagram.svg' %}" alt="instagram"></a>
-                    <a href="#" class="social-item"><img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/black-facebook.svg' %}" alt="facebook"></a>
-                    <a href="#" class="social-item"><img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/black-vk.svg' %}" alt="vk"></a>
+                <div class="col-3 social-container">
+                    <a href="#" class="social-item">
+                        <img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/color-instagram.svg' %}" alt="instagram">
+                    </a>
+                    <a href="#" class="social-item">
+                        <img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/color-facebook.svg' %}" alt="facebook">
+                    </a>
+                    <a href="#" class="social-item">
+                        <img src="{% static 'My_Lovely_Learning_static/svg/footer_svg/color-vk.svg' %}" alt="vk">
+                    </a>
                 </div>
             </div>
         </div>
