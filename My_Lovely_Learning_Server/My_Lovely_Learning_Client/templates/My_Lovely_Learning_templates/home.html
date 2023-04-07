@@ -4,10 +4,15 @@
 
 <section class="home-container">
     <div class="container">
-        
-        <form action="/" method="get">
+
+        <form action="{% url 'main' %}" method="post">
+            {% csrf_token %}
             <button type="submit">ger</button>
         </form>
+
+        {% if otvet == 'yes'%}
+            <h1>ДА БЛЯТЬ</h1>
+        {% endif %}
     </div>
 </section>
 

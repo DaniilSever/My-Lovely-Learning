@@ -5,6 +5,9 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
+    if request.method == 'POST':
+        return render(request, 'My_Lovely_Learning_templates/home.html', {"otvet": "yes"})
+
     return render(request, 'My_Lovely_Learning_templates/home.html')
 
 def catalog(request):
