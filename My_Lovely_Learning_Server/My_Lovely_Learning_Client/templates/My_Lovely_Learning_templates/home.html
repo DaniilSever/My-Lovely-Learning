@@ -1,10 +1,18 @@
-{% extends 'My_Lovely_Learning_templates/base_no_user.html' %}
+{% extends 'My_Lovely_Learning_templates/base.html' %}
 
 {% block main_content %}
 
 <section class="home-container">
     <div class="container">
-        
+
+        <form action="{% url 'main' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">ger</button>
+        </form>
+
+        {% if otvet == 'yes'%}
+            <h1>ДА БЛЯТЬ</h1>
+        {% endif %}
     </div>
 </section>
 
