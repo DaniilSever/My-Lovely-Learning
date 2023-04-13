@@ -18,7 +18,9 @@ def redirect_to_main(request):
     return redirect('main', permanent=True)
 
 class RegisterUser(CreateView):
-    form_class = RegisterUserFormtemplate_name = 'My_Lovely_Learning_templates/register.html'
+    form_class = RegisterUserForm
+    template_name = 'My_Lovely_Learning_templates/register.html'
+    success_url = reverse_lazy('login')
     
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
