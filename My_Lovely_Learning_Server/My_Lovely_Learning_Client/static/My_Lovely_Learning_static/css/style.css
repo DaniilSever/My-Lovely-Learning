@@ -15,6 +15,11 @@
     --color-wight: #FFF;
     --color-header-search: #555;
     --color-black: #000;
+
+    --main-border-size: 1px;
+    --30-border-radius: 30px;
+    --15-border-radius: 15px;
+    --60-border-radius: 60px;
 }
 
 * {
@@ -115,7 +120,7 @@ body::-webkit-scrollbar {
 .input-search {
     height: 34px;
     width: 180px;
-    border-radius: 15px;
+    border-radius: var(--15-border-radius);
     color: var(--color-main);
     background-color: var(--color-header-search);
     outline: none;
@@ -132,7 +137,7 @@ body::-webkit-scrollbar {
     height: 34px;
     align-items: center;
     padding-left: 7px;
-    border-radius: 15px;
+    border-radius: var(--15-border-radius);
     background-color: var(--color-header-search);
     outline: none;
     border: 0;
@@ -190,11 +195,11 @@ body::-webkit-scrollbar {
 }
 
 .sign {
-    width: 311px;
+    width: 310px;
     height: 60px;
     align-items: center;
     justify-content: space-evenly;
-    border-left: 1px solid #BCBCBC;
+    border-left: var(--main-border-size) solid #BCBCBC;
     border-radius: 0;
 }
 
@@ -207,8 +212,8 @@ body::-webkit-scrollbar {
     background-color: var(--color-dark);
     outline: none;
     text-align: center;
-    border: 1px solid #BCBCBC;
-    border-radius: 15px;
+    border: var(--main-border-size) solid #BCBCBC;
+    border-radius: var(--15-border-radius);
 }
 
 .sign-in{
@@ -225,7 +230,7 @@ body::-webkit-scrollbar {
     width: 117px;
     align-items: center;
     justify-content: space-evenly;
-    border-left: 1px solid #BCBCBC;
+    border-left: var(--main-border-size) solid #BCBCBC;
     border-radius: 0;
 }
 
@@ -240,7 +245,7 @@ body::-webkit-scrollbar {
 }
 
 .exit-nav-item {
-    border-top: 1px solid var(--color-main);
+    border-top: var(--main-border-size) solid var(--color-main);
 } 
 
 /* footer */
@@ -359,7 +364,7 @@ body::-webkit-scrollbar {
 .popup-sign-content {
     width: 100%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: var(--main-border-radius);
     align-items: center;
     justify-content: center;
 }
@@ -396,7 +401,7 @@ body::-webkit-scrollbar {
     width: 400px;
     height: 50px;
     background: var(--color-main);
-    border-radius: 15px;
+    border-radius: var(--15-border-radius);
     border: 0;
     padding-left: 17px;
     margin-bottom: 48px;
@@ -422,7 +427,7 @@ body::-webkit-scrollbar {
     background-color: var(--color-interactiv);
     color: var(--color-wight);
     border: 0;
-    border-radius: 15px;
+    border-radius: var(--15-border-radius);
 
     font-style: normal;
     font-weight: 400;
@@ -458,7 +463,7 @@ body::-webkit-scrollbar {
     width: 972px;
     height: 50px;
     background-color: var(--color-main);
-    border-radius: 60px;
+    border-radius: var(--60-border-radius);
     align-items: center;
     justify-content: space-around;
 }
@@ -467,7 +472,7 @@ body::-webkit-scrollbar {
     width: 288px;
     height: 35px;
     background-color: var(--color-wight);
-    border-radius: 60px;
+    border-radius: var(--60-border-radius);
     
     align-items: center;
     justify-content: center;
@@ -475,7 +480,7 @@ body::-webkit-scrollbar {
 
 .input-home-search  {
     background-color: var(--color-wight);
-    border-radius: 60px;
+    border-radius: var(--60-border-radius);
     border: 0;
     outline: none;
     width: 230px;
@@ -531,7 +536,7 @@ body::-webkit-scrollbar {
 .home-radio-input {
     width: 20px;
     height: 20px;
-    border: 1px solid var(--color-dark);
+    border: var(--main-border-size) solid var(--color-dark);
     background-color: var(--color-main);
     margin-right: 12px;
 }
@@ -549,7 +554,7 @@ body::-webkit-scrollbar {
     display: flex;
     width: 100px;
     height: 40px;
-    border-radius: 30px;
+    border-radius: var(--main-border-radius);
     border: 0;
 
     font-style: normal;
@@ -621,7 +626,7 @@ body::-webkit-scrollbar {
     display: flex;
     margin: 0;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: var(--main-border-radius);
 }
 
 .carousel_container {
@@ -647,7 +652,7 @@ body::-webkit-scrollbar {
 .carousel_course_item {
     width: 250px;
     height: 150px;
-    border-radius: 30px;
+    border-radius: var(--main-border-radius);
     background-color: var(--color-main);
 }
 
