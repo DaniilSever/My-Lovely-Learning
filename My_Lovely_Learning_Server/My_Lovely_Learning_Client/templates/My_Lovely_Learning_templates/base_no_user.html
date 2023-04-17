@@ -26,14 +26,28 @@
                         <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse nav-container" id="navbarNavDropdown">
-                            <ul class="navbar-nav nav-container-left">
-                                <li class="nav-item me-lg-5">
-                                    <a href="/" class="nav-link">Каталог</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Преподавателям</a>
-                                </li>
-                            </ul>
+                            {% if request.user.is_authenticated %}
+                                <ul class="navbar-nav nav-container-left-user">
+                                    <li class="nav-item">
+                                        <a href="/" class="nav-link">Каталог</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Мое обучение</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Преподавателям</a>
+                                    </li>
+                                </ul>
+                            {% else %}
+                                <ul class="navbar-nav nav-container-left">
+                                    <li class="nav-item me-lg-5">
+                                        <a href="/" class="nav-link">Каталог</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Преподавателям</a>
+                                    </li>
+                                </ul>
+                            {% endif %}
                             <ul class="navbar-nav nav-container-right">
                                 <li class="nav-item me-lg-4 search-container">
                                     <form class="d-flex form-search" role="search">
@@ -60,10 +74,25 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <div class="btn-group sign" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn-sign sign-in" data-bs-toggle="modal" data-bs-target="#exampleModal_sign-in">Войти</button>
-                                        <button type="button" class="btn-sign sign-up" data-bs-toggle="modal" data-bs-target="#exampleModal_sign-up">Регистрация</button>
-                                    </div>
+                                    {% if request.user.is_authenticated %}
+                                        <li class="nav-item dropdown dropdown-user">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="{% static 'My_Lovely_Learning_static/img/defaultUserAvatar.png' %}" alt="">
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-user-menu">
+                                                <li><a href="#" class="dropdown-item user-link">Профиль</a></li>
+                                                <li><a href="#" class="dropdown-item user-link">Настройки</a></li>
+                                                <li><a href="#" class="dropdown-item user-link">Уведомления</a></li>
+                                                <li><a href="#" class="dropdown-item user-link">Что нового</a></li>
+                                                <li><a href="#" class="dropdown-item user-link exit-nav-item">Выход</a></li>
+                                            </ul>
+                                        </li>
+                                    {% else %}
+                                        <div class="btn-group sign" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn-sign sign-in" data-bs-toggle="modal" data-bs-target="#exampleModal_sign-in">Войти</button>
+                                            <button type="button" class="btn-sign sign-up" data-bs-toggle="modal" data-bs-target="#exampleModal_sign-up">Регистрация</button>
+                                        </div>
+                                    {% endif %}
                                 </li>
                             </ul>
                         </div>
@@ -90,8 +119,8 @@
                         <button type="button" class="popup-sign-button sign-up-button" data-bs-toggle="modal" data-bs-target="#exampleModal_sign-up">Зарегистрироваться</button>
                     </div>
                     <div class="popup-social">
-                        <a href="#" class="vk"><img src="../../static/My_Lovely_Learning_static/svg/popup_svg/vk_svg.svg" alt="vk"></a>
-                        <a href="#" class="google"><img src="../../static/My_Lovely_Learning_static/svg/popup_svg/google.svg" alt="google"></a>
+                        <a href="#" class="vk"><img src="{% static 'My_Lovely_Learning_static/svg/popup_svg/vk_svg.svg' %}" alt="vk"></a>
+                        <a href="#" class="google"><img src="{% static 'My_Lovely_Learning_static/svg/popup_svg/google.svg' %}" alt="google"></a>
                     </div>
                 </div>
             </div>
@@ -113,8 +142,8 @@
                         <button type="button" class="popup-sign-button sign-up-button">Зарегистрироваться</button>
                     </div>
                     <div class="popup-social">
-                        <a href="#" class="vk"><img src="../../static/My_Lovely_Learning_static/svg/popup_svg/vk_svg.svg" alt="vk"></a>
-                        <a href="#" class="google"><img src="../../static/My_Lovely_Learning_static/svg/popup_svg/google.svg" alt="google"></a>
+                        <a href="#" class="vk"><img src="{% static 'My_Lovely_Learning_static/svg/popup_svg/vk_svg.svg' %}" alt="vk"></a>
+                        <a href="#" class="google"><img src="{% static 'My_Lovely_Learning_static/svg/popup_svg/google.svg' %}" alt="google"></a>
                     </div>
                 </div>
             </div>
