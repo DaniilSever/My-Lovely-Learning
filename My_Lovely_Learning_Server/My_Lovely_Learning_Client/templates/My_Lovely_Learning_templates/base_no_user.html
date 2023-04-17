@@ -29,7 +29,7 @@
                             {% if request.user.is_authenticated %}
                                 <ul class="navbar-nav nav-container-left-user">
                                     <li class="nav-item">
-                                        <a href="/" class="nav-link">Каталог</a>
+                                        <a href="{% url 'main' %}" class="nav-link">Каталог</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">Мое обучение</a>
@@ -41,7 +41,7 @@
                             {% else %}
                                 <ul class="navbar-nav nav-container-left">
                                     <li class="nav-item me-lg-5">
-                                        <a href="/" class="nav-link">Каталог</a>
+                                        <a href="{% url 'main' %}" class="nav-link">Каталог</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">Преподавателям</a>
@@ -84,13 +84,13 @@
                                                 <li><a href="#" class="dropdown-item user-link">Настройки</a></li>
                                                 <li><a href="#" class="dropdown-item user-link">Уведомления</a></li>
                                                 <li><a href="#" class="dropdown-item user-link">Что нового</a></li>
-                                                <li><a href="#" class="dropdown-item user-link exit-nav-item">Выход</a></li>
+                                                <li><a href="{% url 'logout' %}" class="dropdown-item user-link exit-nav-item">Выход</a></li>
                                             </ul>
                                         </li>
                                     {% else %}
                                         <div class="btn-group sign" role="group" aria-label="Basic example">
                                             <button type="button" class="btn-sign sign-in" data-bs-toggle="modal" data-bs-target="#exampleModal_sign-in">Войти</button>
-                                            <button type="button" class="btn-sign sign-up" data-bs-toggle="modal" data-bs-target="#exampleModal_sign-up">Регистрация</button>
+                                            <a href="{% url 'registr' %}" class="btn-sign sign-up">Регистрация</a>
                                         </div>
                                     {% endif %}
                                 </li>
@@ -110,14 +110,18 @@
                     <div class="modal-header popup-header">
                         <h1 class="modal-title popup-header-text" id="title_sign">Войти</h1>
                     </div>
-                    <div class="popup-body">
-                        <input type="text" class="input-popup" placeholder="Логин...">
-                        <input type="password" class="input-popup" placeholder="Пароль...">
-                    </div>
-                    <div class="modal-footer popup-footer">
-                        <button type="button" class="popup-sign-button">Войти</button>
-                        <button type="button" class="popup-sign-button sign-up-button" data-bs-toggle="modal" data-bs-target="#exampleModal_sign-up">Зарегистрироваться</button>
-                    </div>
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        {% for f in form %}
+                        <p><label class="form-label" for="{{ f.id_for_label }}"></label>{{ f }}</p>
+                        <div class="form-error">{{ f.errors }}</div>
+                        {% endfor %}
+                        
+                        <div class="modal-footer popup-footer">
+                            <button type="submit" class="popup-sign-button">Войти</button>
+                        </div>
+                    </form>
                     <div class="popup-social">
                         <a href="#" class="vk"><img src="{% static 'My_Lovely_Learning_static/svg/popup_svg/vk_svg.svg' %}" alt="vk"></a>
                         <a href="#" class="google"><img src="{% static 'My_Lovely_Learning_static/svg/popup_svg/google.svg' %}" alt="google"></a>
@@ -126,29 +130,6 @@
             </div>
         </div>
 
-        <!-- Modal sign-up -->
-        <div class="modal fade" id="exampleModal_sign-up" tabindex="-1" role="dialog" aria-labelledby="title_sign" aria-hidden="true">
-            <div class="modal-dialog popup-sign-zone" role="document">
-                <div class="modal-content popup-sign-content">
-                    <div class="modal-header popup-header">
-                        <h1 class="modal-title popup-header-text" id="title_sign">Регистрация</h1>
-                    </div>
-                    <div class="popup-body">
-                        <input type="text" class="input-popup" placeholder="Почта...">
-                        <input type="password" class="input-popup" placeholder="Пароль...">
-                    </div>
-                    <div class="modal-footer popup-footer">
-                        <button type="button" class="popup-sign-button"data-bs-toggle="modal" data-bs-target="#exampleModal_sign-in">Войти</button>
-                        <button type="button" class="popup-sign-button sign-up-button">Зарегистрироваться</button>
-                    </div>
-                    <div class="popup-social">
-                        <a href="#" class="vk"><img src="{% static 'My_Lovely_Learning_static/svg/popup_svg/vk_svg.svg' %}" alt="vk"></a>
-                        <a href="#" class="google"><img src="{% static 'My_Lovely_Learning_static/svg/popup_svg/google.svg' %}" alt="google"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     {% block main_content %}
     {% endblock %}

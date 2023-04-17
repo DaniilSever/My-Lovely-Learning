@@ -4,9 +4,16 @@ from django.conf.urls.static import static
 from My_Lovely_Learning_Server import settings
 from .views import * 
 
+class_list = [
+    LoginUser.as_view,
+    RegisterUser.as_view,
+]
+
 urlpatterns = [
     path('', redirectMe),
-    path('home/', index,  name='main'),
+    path('home/', LoginUser.as_view(),  name='main'),
+    path('reg/', RegisterUser.as_view(), name='registr'),
+    path('logout/', logout_user, name='logout'),
 ]   
 
 if settings.DEBUG: 
