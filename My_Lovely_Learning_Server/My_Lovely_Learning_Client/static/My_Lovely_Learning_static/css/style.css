@@ -60,7 +60,7 @@ body::-webkit-scrollbar {
     width: 100%;
     position: fixed;
     background: var(--color-dark);
-    z-index: 10;
+    z-index: 1000;
 }
 
 .navbar{
@@ -408,7 +408,218 @@ body::-webkit-scrollbar {
 .home-container {
     display: flex;
     align-items: center;
-    height: 900px;
-    z-index: 0;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    justify-content: center;
+
+}
+
+.home-title-search  {
+    display: flex;
+    flex-direction: row;
+    margin-top: 47px;
+    margin-bottom: 38px;
+    width: 972px;
+    height: 50px;
+    background-color: var(--color-main);
+    border-radius: 60px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-home-search {
+    width: 288px;
+    height: 35px;
+    background-color: var(--color-wight);
+    border-radius: 60px;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.input-home-search  {
+    background-color: var(--color-wight);
+    border-radius: 60px;
+    border: 0;
+    outline: none;
+    width: 230px;
+}
+
+.search-logo {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-dropdown-home {
+    border: 0;
+    background-color: var(--color-main);
+    outline: none;
+    color: var(--color-dark);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.btn-dropdown-home:hover {
+    color: var(--color-dark);
+}
+
+.home-dropdown-container {
+    height: 95px;
+    background-color: var(--color-main);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+.home-dropdown-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--color-dark);
+}
+
+.home-dropdown-item:hover {
+    color: var(--color-dark);
+    background-color: #9c9c9c;
+}
+
+.home-selection {
+    display: flex;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-radio-input {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color-dark);
+    background-color: var(--color-main);
+    margin-right: 12px;
+}
+
+.home-radio-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+}
+
+.search-btn {
+    display: flex;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    border: 0;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: var(--color-wight);
+    background-color: var(--color-interactiv);
+}
+
+.title-cource-zone {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--color-dark);
+    margin-bottom: 20px;
+}
+
+.online-cource-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 66px;
+}
+
+.online-cource-selection {
+    margin-bottom: 35px;
+}
+
+.link-selection {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    
+    color: var(--color-dark);
+}
+
+.link-selection:not(:last-child) {
+    margin-right: 49px;
+}
+
+.recomendation-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 69px;
+}
+
+.recent-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 56px;
+}
+
+/* Carousel */
+
+.courses_slide {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.carousel_container {
+    display: flex;  
+    width: 778px;
+    margin: 0;
+}
+
+.carousel-item {
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-item-up, .carousel-item-down {
+    display: flex;
+    flex-direction: row;
+}
+
+.carousel-item-up {
+    margin-bottom: 35px;
+}
+
+.carousel_course_item {
+    width: 250px;
+    height: 150px;
+    border-radius: 30px;
+    background-color: var(--color-main);
+}
+
+.carousel_course_item:not(:last-child){ 
+    margin-right: 14px;
+}
