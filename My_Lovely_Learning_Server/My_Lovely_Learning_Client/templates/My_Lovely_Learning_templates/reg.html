@@ -18,7 +18,7 @@
                     </div>
                     <div class="right-reg-zone">
                         {% for f in form %}
-                        <label for="{{ f.id_for_label }}"></label>{{f}}
+                        {{f}}
                         <div class="reg-error">{{f.errors}}</div>
                         {% endfor %}
                     </div>

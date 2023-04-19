@@ -48,7 +48,11 @@ def profile(request):
 def main_settings(request):
     return render(request, 'My_Lovely_Learning_templates/settings_user.html')
 
+def email_settings(request):
+    return render(request, 'My_Lovely_Learning_templates/settings_email.html')
 
+def pass_settings(request):
+    return render(request, 'My_Lovely_Learning_templates/settings_password.html')
 
 def logout_user(request):
     logout(request)

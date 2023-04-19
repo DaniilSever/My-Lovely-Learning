@@ -16,8 +16,11 @@
     --color-header-search: #555;
     --color-black: #000;
     --color-paceholder: #888;
+    --color-block: #F3F3F3;
+    --color-border: #C5C5C5;
 
     --main-border-size: 1px;
+    --5-border-radius: 5px;
     --30-border-radius: 30px;
     --15-border-radius: 15px;
     --60-border-radius: 60px;
@@ -55,6 +58,23 @@ body::-webkit-scrollbar {
     height: 0px;
 }
 
+textarea {
+    resize: none;
+}
+
+/* autor-class */
+
+.height-40 {
+    height: 40px;
+}
+
+.height-100 {
+    height: 100px;
+}
+
+.height-150 {
+    height: 150px;
+}
 
 /* header */
 
@@ -174,25 +194,31 @@ body::-webkit-scrollbar {
 
 .dropdown-menu {
     width: 160px;
-    height: 250px;
+    height: 320px;
     margin: 0;
     background-color: var(--color-dark);
 }   
 
-.dropdown-menu.show {
-    margin: 0;
+.dropdown-menu-header {
     border: 0;
 }
 
+.dropdown-menu.show {
+    margin: 0;
+}
+
 .dropdown-item {
-    color: var(--color-main);
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
 }
 
-.dropdown-item:hover {
+.dropdown-header {
+    color: var(--color-main);
+}
+
+.dropdown-header:hover {
     background-color: #454545;
     color: var(--color-interactiv);
     padding-left: 25px;
@@ -445,6 +471,23 @@ body::-webkit-scrollbar {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+}
+
+.popup-label, .text-popup {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.popup-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.text-popup {
+    font-size: 15px;
+    margin-bottom: 25px;
 }
 
 /* home */
@@ -892,10 +935,6 @@ body::-webkit-scrollbar {
 
 /* settings */
 
-.settings-container {
-    display: flex;
-}
-
 .settings-menu{
     display: flex;
     flex-direction: column;
@@ -906,8 +945,15 @@ body::-webkit-scrollbar {
 
 .settings-zone {
     display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    align-items: center;
+}
+
+.settings-section {
+    display: flex;
     flex-direction: row;
-    width: 1000px;
+    width: 1200px;
     justify-content: space-between;
 }
 
@@ -924,3 +970,149 @@ body::-webkit-scrollbar {
 .settings-active {
     color: var(--color-interactiv)
 }
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.settings-form-item{
+    display: flex;
+    align-items: center;
+}
+
+.settings-form-item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.dropdown-settings-btn {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    background-color: var(--color-block);
+    border-radius: var(--30-border-radius);
+    border: var(--main-border-size) solid var(--color-border);
+}
+
+.settings-dropdown-menu {
+    height: 280px;
+    color: var(--color-dark);
+    background-color: var(--color-block);
+    border-radius: var(--15-border-radius);
+    border: var(--main-border-size) solid var(--color-border);
+}
+
+.settings-item-drop {
+    height: 30px;
+}
+
+.settings-item-drop:hover{
+    height: 30px;
+    background-color: var(--color-border);
+    border-radius: var(--5-border-radius);
+}
+
+.dropdown-settings-btn,
+.dropdown-settings-btn:hover,
+.dropdown-settings-btn:focus {
+    color: var(--color-black);
+}
+
+.form-settings-label {
+    margin-right: 100px;
+    width: 200px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+}
+
+.title-settings {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+    margin-bottom: 45px;
+}
+
+.label-email {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+    margin-bottom: 45px;
+}
+
+.email-view, .email-status {
+    width: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+
+    color: var(--color-dark);
+}
+
+.view-all-email {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    padding-left: 15px;
+    min-height: 30px;
+    background-color: var(--color-block);
+    border-radius: var(--15-border-radius);
+    border: var(--main-border-size) solid var(--color-border);
+}
+
+.form-input {
+    background-color: var(--color-block);
+    color: var(--color-dark);
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    padding-left: 20px;
+    width: 500px;
+    border-radius: var(--30-border-radius);
+    border: var(--main-border-size) solid var(--color-border);
+    outline: none;
+}
+
+.form-input::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.submit-settings-btm {
+    border: 0;
+    width: 200px;
+    height: 50px;
+    color: var(--color-white);
+    background: var(--color-interactiv);
+    border-radius: 8px;
+}
+
+.form-email-input {
+    width: 700px;
+    margin-bottom: 30px;
+}
+
