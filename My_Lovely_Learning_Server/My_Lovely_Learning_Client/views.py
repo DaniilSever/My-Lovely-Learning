@@ -42,6 +42,14 @@ class LoginUser(LoginView):
     def get_success_url(self) -> str:
         return reverse_lazy('main')
 
+def profile(request):
+    return render(request, 'My_Lovely_Learning_templates/profile.html')
+
+def main_settings(request):
+    return render(request, 'My_Lovely_Learning_templates/settings_user.html')
+
+
+
 def logout_user(request):
     logout(request)
     return redirect('main')

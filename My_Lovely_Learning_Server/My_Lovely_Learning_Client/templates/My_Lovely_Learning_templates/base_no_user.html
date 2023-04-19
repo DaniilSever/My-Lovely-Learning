@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <header class="header-container">
+    <header class="header-container fixed-top">
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg">
@@ -77,12 +77,11 @@
                                     {% if request.user.is_authenticated %}
                                         <li class="nav-item dropdown dropdown-user">
                                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <img src="{% static 'My_Lovely_Learning_static/img/defaultUserAvatar.png' %}" alt="">
+                                                <img class="user-ava" src="{% static 'My_Lovely_Learning_static/img/defaultUserAvatar.png' %}" alt="user-avatar">
                                             </a>
                                             <ul class="dropdown-menu dropdown-user-menu">
-                                                <li><a href="#" class="dropdown-item user-link">Профиль</a></li>
-                                                <li><a href="#" class="dropdown-item user-link">Настройки</a></li>
-                                                <li><a href="#" class="dropdown-item user-link">Уведомления</a></li>
+                                                <li><a href="{% url 'profile' %}" class="dropdown-item user-link">Профиль</a></li>
+                                                <li><a href="{% url 'settings' %}" class="dropdown-item user-link">Настройки</a></li>
                                                 <li><a href="#" class="dropdown-item user-link">Что нового</a></li>
                                                 <li><a href="{% url 'logout' %}" class="dropdown-item user-link exit-nav-item">Выход</a></li>
                                             </ul>
@@ -135,7 +134,7 @@
     {% endblock %}
 
 
-    <footer class="footer-container">
+    <footer class="footer-container fixed-bottom">
         <div class="container">
             <div class="row pt-3 justify-content-center">
                 <div class="col-3 left-footer-container">

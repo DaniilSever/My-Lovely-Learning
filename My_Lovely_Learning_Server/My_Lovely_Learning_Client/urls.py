@@ -13,7 +13,9 @@ urlpatterns = [
     path('', redirectMe),
     path('home/', LoginUser.as_view(),  name='main'),
     path('reg/', RegisterUser.as_view(), name='registr'),
+    path('profile/', profile, name='profile'),
     path('logout/', logout_user, name='logout'),
+    path('settings/profile', main_settings, name='settings'),
 ]   
 
 if settings.DEBUG: 
