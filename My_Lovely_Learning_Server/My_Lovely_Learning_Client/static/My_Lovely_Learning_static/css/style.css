@@ -438,9 +438,9 @@ textarea {
 .input-popup {
     width: 400px;
     height: 50px;
-    background: var(--color-main);
+    background-color: var(--color-block);
     border-radius: var(--15-border-radius);
-    border: 0;
+    border: var(--main-border-size) solid var(--color-border);
     padding-left: 17px;
     margin-bottom: 48px;
 }
@@ -781,9 +781,9 @@ textarea {
 .reg-input {
     width: 400px;
     height: 50px;
-    background: var(--color-main);
+    background: var(--color-block);
     border-radius: var(--15-border-radius);
-    border: 0;
+    border: var(--main-border-size) solid var(--color-border);
     outline: none;
     padding-left: 17px;
 }
