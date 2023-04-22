@@ -1123,3 +1123,121 @@ textarea {
 
 /* user cource */
 
+.learn-dropdown-menu {
+    background-color: var(--color-block);
+    border: var(--main-border-size) solid var(--color-border);
+    height: 95px;
+}
+
+.learn-item-drop:hover {
+    background-color: var(--color-border);
+}
+
+.learn-link {
+    position: fixed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+}
+
+.learn-link:hover {
+    color: var(--color-dark)
+}
+
+.learn-drop-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+}
+
+.learn-drop-link:hover {
+    background-color: var(--color-border);
+}
+
+.learn-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 250px;
+    height: 150px;
+}
+
+.learn-zone {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    align-items: center;
+}
+
+.learn-section {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    justify-content: space-between;
+}
+
+.learn-active,
+.learn-active:hover {
+    color: var(--color-interactiv);
+}
+
+.learn-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+    margin-bottom: 30px;
+}
+
+.form-learn-search {
+    display: flex;
+    align-items: center; 
+    width: 260px;
+    padding-left: 5px;
+    background-color: var(--color-block);
+    border: var(--main-border-size) solid var(--color-border);
+    border-radius: var(--15-border-radius);
+    margin-bottom: 30px;
+}
+
+.input-learn-search {
+    background-color: var(--color-block);
+    border: 0;
+    outline: none;
+    border-radius: var(--15-border-radius);
+}
+
+.learn-button-search {
+    border: 0;
+    height: 30px;
+    color: var(--color-white);
+    background: var(--color-interactiv);
+    border-radius: 8px;
+    margin-left: 15px;
+}
+
+.learn-cource-output {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin-bottom: 40px;
+}
+
+.learn-cource {
+    height: 50px;
+    background-color: var(--color-block);
+    border: var(--main-border-size) solid var(--color-border);
+    border-radius: var(--30-border-radius);
+}
+
+.learn-cource:not(:last-child) {
+    margin-bottom: 15px;
+}
