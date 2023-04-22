@@ -42,6 +42,9 @@ class LoginUser(LoginView):
     def get_success_url(self) -> str:
         return reverse_lazy('main')
 
+def my_cource(request):
+    return render(request, 'My_Lovely_Learning_templates/user_learn_cource.html')
+
 def profile(request):
     return render(request, 'My_Lovely_Learning_templates/profile.html')
 

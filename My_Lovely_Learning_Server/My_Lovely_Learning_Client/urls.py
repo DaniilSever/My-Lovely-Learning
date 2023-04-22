@@ -12,6 +12,7 @@ class_list = [
 urlpatterns = [
     path('', redirectMe),
     path('home/', LoginUser.as_view(),  name='main'),
+    path('cource/', my_cource,name='user_cource'),
     path('reg/', RegisterUser.as_view(), name='registr'),
     path('profile/', profile, name='profile'),
     path('logout/', logout_user, name='logout'),

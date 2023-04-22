@@ -50,9 +50,6 @@ h1, h3, h5, p {
 
 /* scrollbar */
 
-body {
-    overflow-y: scroll;
-}
 body::-webkit-scrollbar {
     width: 0px;
     height: 0px;
@@ -81,6 +78,7 @@ textarea {
 .container {
     margin: 0;
     max-width: 100%;
+    
 }
 
 .header-container {
@@ -94,6 +92,7 @@ textarea {
 
 .navbar{
     padding: 0;
+    width: 100%;
 }
 
 .logo {
@@ -286,13 +285,24 @@ textarea {
     height: 45px;
 }
 
+/* header-hide */
+
+.hide-header {
+    width: 100%;
+    height: 60px;
+}
+
 /* footer */
 
 .footer-container {
     display: flex;
-    align-items: center;
+    width: 100%;
     justify-content: center;
     background-color: var(--color-main);
+}
+
+.footer-g {
+    width: 100%;
 }
 
 .container-text-footer {
@@ -494,19 +504,12 @@ textarea {
 
 .home-container {
     display: flex;
-    align-items: center;
-}
-
-.main-container {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
     justify-content: center;
-
 }
 
-.home-title-search  {
+.home-title-search {
     display: flex;
     flex-direction: row;
     margin-top: 47px;
@@ -696,8 +699,8 @@ textarea {
     flex-direction: row;
 }
 
-.carousel-item-up {
-    margin-bottom: 35px;
+.carousel-item-down {
+    margin-top: 35px;
 }
 
 .carousel_course_item {
@@ -818,6 +821,7 @@ textarea {
 
 .profile-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -891,6 +895,7 @@ textarea {
 
 .profile-zone {
     display: flex;
+    flex-direction: column;
     padding-top: 90px;
 }
 
@@ -1115,4 +1120,6 @@ textarea {
     width: 700px;
     margin-bottom: 30px;
 }
+
+/* user cource */
 

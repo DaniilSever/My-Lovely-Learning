@@ -1,0 +1,22 @@
+{% extends 'My_Lovely_Learning_templates/base.html' %}
+{% load static %}
+{% block main_content %}
+
+<section class="learn-container container">
+    <div class="learn-zone">
+        <div class="learn-section">
+            <div class="learn-menu">
+                {% block learn-menu  %}
+                {% endblock %}
+    
+            </div>
+            <div class="learn-forms">
+                {% block learn-section %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
