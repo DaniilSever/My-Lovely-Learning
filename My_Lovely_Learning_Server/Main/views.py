@@ -41,11 +41,6 @@ class LoginUser(LoginView):
     
     def get_success_url(self) -> str:
         return reverse_lazy('main')
-    
-class PasswordChangeView(PasswordChangeView):
-    form_class = PasswordsChangeForm
-    success_url = reverse_lazy('main')
-    template_name = "Main_templates/settings_password.html"
 
 def my_cource(request):
     return render(request, 'Main_templates/user_learn_cource.html')
@@ -61,15 +56,6 @@ def class_cource(request):
 
 def profile(request):
     return render(request, 'Main_templates/profile.html')
-
-def main_settings(request):
-    return render(request, 'Main_templates/settings_user.html')
-
-def email_settings(request):
-    return render(request, 'Main_templates/settings_email.html')
-
-def pass_settings(request):
-    return render(request, 'Main_templates/settings_password.html')
 
 def logout_user(request):
     logout(request)

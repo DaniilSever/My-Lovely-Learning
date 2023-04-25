@@ -1,13 +1,8 @@
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.static import static
 
 from Server import settings
 from .views import * 
-
-class_list = [
-    LoginUser.as_view,
-    RegisterUser.as_view,
-]
 
 urlpatterns = [
     path('', redirectMe),
@@ -19,9 +14,6 @@ urlpatterns = [
     path('reg/', RegisterUser.as_view(), name='registr'),
     path('profile/', profile, name='profile'),
     path('logout/', logout_user, name='logout'),
-    path('settings/profile', main_settings, name='settings'),
-    path('settings/email', email_settings, name='set_email'),
-    path('settings/pass', PasswordChangeView.as_view(), name='set_pass')
 ]   
 
 if settings.DEBUG: 
