@@ -1,0 +1,183 @@
+{% extends 'Main_templates/base.html' %}
+{% load static %}
+{% block main_content %}
+
+<section class="home-container container">
+    <section class="home-title-search">
+        <form class="d-flex form-home-search" role="search">
+            <img src="{% static 'Main_static/svg/header_svg/search_logo.svg' %}" alt="search" class="search-logo">
+            <input class="input-home-search" type="search" placeholder="Поиск..." aria-label="Search">
+        </form>
+        
+        <div class="dropdown home-dropdown">
+            <button class="btn-dropdown-home dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                На каком языке
+                <img src="{% static 'Main_static/svg/home_svg/Arrow_down.svg' %}" alt="arrow down">
+            </button>
+            <ul class="dropdown-menu home-dropdown-container">
+                <li><a href="#" class="dropdown-item home-dropdown-item" type="button">На любом языке</a></li>
+                <li><a href="#" class="dropdown-item home-dropdown-item" type="button">На русском</a></li>
+                <li><a href="#" class="dropdown-item home-dropdown-item" type="button">На английском</a></li>
+            </ul>
+        </div>
+
+        <div class="form-check home-selection">
+            <input class="form-check-input home-radio-input" type="checkbox" value="" id="flexCheckHomeFirst">
+            <label class="form-check-label home-radio-text" for="flexCheckHomeFirst">
+                С сертификатами
+            </label>
+        </div>
+        <div class="form-check home-selection">
+            <input class="form-check-input home-radio-input" type="checkbox" value="" id="flexCheckHomeSecond">
+            <label class="form-check-label home-radio-text" for="flexCheckHomeSecond">
+                Бесплатные
+            </label>
+        </div>
+
+        <button type="submit" class="search-btn">Искать</button>
+    </section>
+
+    <section class="online-cource-zone">
+        <h1 class="title-cource-zone">Онлайн Курсы</h1>
+        <div class="online-cource-selection">
+            <a href="#" class="link-selection">Новые курсы</a>
+            <a href="#" class="link-selection">Популярные курсы</a>
+            <a href="#" class="link-selection">Подборка от пользователей</a>    
+            <a href="#" class="link-selection">Повышение квалификации</a>
+        </div>
+        <div id="onlinecarouselRide" class="carousel slide courses_slide">
+            <div class="carousel-inner carousel_container">
+                <div class="carousel-item active">
+                    <div class="carousel-item-up">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                    <div class="carousel-item-down">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item-up">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                    <div class="carousel-item-down">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item-up">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                    <div class="carousel-item-down">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" style="z-index: 2;" type="button" data-bs-target="#onlinecarouselRide" data-bs-slide="prev">
+                    <img src="{% static 'Main_static/svg/home_svg/Left Switch.svg' %}" alt="left_switch">
+                </button>
+                <button class="carousel-control-next" style="z-index: 2;" type="button" data-bs-target="#onlinecarouselRide" data-bs-slide="next">
+                    <img src="{% static 'Main_static/svg/home_svg/Right Switch.svg' %}" alt="right_switch">
+                </button>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="recomendation-zone">
+        <h1 class="title-cource-zone">Рекомендованные Курсы</h1>
+        <div id="recomendationcarousel" class="carousel slide courses_slide">
+            <div class="carousel-inner carousel_container">
+                <div class="carousel-item active">
+                    <div class="carousel-item-up">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                    <div class="carousel-item-down">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item-up">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                    <div class="carousel-item-down">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item-up">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                    <div class="carousel-item-down">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" style="z-index: 2;" type="button" data-bs-target="#recomendationcarousel" data-bs-slide="prev">
+                    <img src="{% static 'Main_static/svg/home_svg/Left Switch.svg' %}" alt="left_switch">
+                </button>
+                <button class="carousel-control-next" style="z-index: 2;" type="button" data-bs-target="#recomendationcarousel" data-bs-slide="next">
+                    <img src="{% static 'Main_static/svg/home_svg/Right Switch.svg' %}" alt="right_switch">
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="recent-zone">
+        <h1 class="title-cource-zone">Недавно Просмотренные</h1>
+        <div id="recentcarousel" class="carousel slide courses_slide">
+            <div class="carousel-inner carousel_container">
+                <div class="carousel-item active">
+                    <div class="carousel-item-up">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item-up">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item-up">
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                        <div class="carousel_course_item"></div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" style="z-index: 2;" type="button" data-bs-target="#recentcarousel" data-bs-slide="prev">
+                    <img src="{% static 'Main_static/svg/home_svg/Left Switch.svg' %}" alt="left_switch">
+                </button>
+                <button class="carousel-control-next" style="z-index: 2;" type="button" data-bs-target="#recentcarousel" data-bs-slide="next">
+                    <img src="{% static 'Main_static/svg/home_svg/Right Switch.svg' %}" alt="right_switch">
+                </button>
+            </div>
+        </div>
+    </section>
+</section>
+
+{% endblock %}

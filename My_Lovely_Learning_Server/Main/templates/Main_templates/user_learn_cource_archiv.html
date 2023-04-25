@@ -1,0 +1,27 @@
+{% extends 'Main_templates/user_learn_template.html' %}
+{% load static %}
+
+{% block learn-menu %}
+
+<div class="learn-button"><a href="{% url 'user_cource' %}" class="learn-link">Мои курсы</a></div>
+<div class="learn-button"><a href="{% url 'user_favorit' %}" class="learn-link">Избранные</a></div>
+<div class="learn-button"><h1 class="learn-link learn-active">Архив</h1></div>
+<div class="learn-button"><a href="{% url 'user_class' %}" class="learn-link">Классы</a></div>
+{% endblock %}
+
+{% block learn-section %}
+<h1 class="learn-title">Архив</h1>
+<form class="form-learn-search" role="search">
+    <img src="{% static 'Main_static/svg/header_svg/search_logo.svg' %}" alt="search" class="search-logo">
+    <input class="input-learn-search" type="search" placeholder="Поиск..." aria-label="Search">
+    <button type="submit" class="learn-button-search">Искать</button>
+</form>
+<section class="learn-cource-output">
+    <div class="learn-cource"></div>
+    <div class="learn-cource"></div>
+    <div class="learn-cource"></div>
+    <div class="learn-cource"></div>
+    <div class="learn-cource"></div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'Main_templates/base.html' %}
+{% load static %}
+{% block main_content %}
+
+<section class="settings-container container">
+    <div class="settings-zone">
+        <div class="settings-section">
+            <div class="settings-menu">
+                {% block settings-menu  %}
+                {% endblock %}
+    
+            </div>
+            <div class="settings-forms">
+                {% block settings-section %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

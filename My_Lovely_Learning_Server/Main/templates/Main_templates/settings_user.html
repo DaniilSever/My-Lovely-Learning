@@ -1,0 +1,60 @@
+{% extends 'Main_templates/settings_templates.html' %}
+{% load static %}
+
+{% block settings-menu %}
+
+<div class="settings-button"><h1 class="settings-link settings-active">Редактировать профиль</h1></div>
+<div class="settings-button"><a href="{% url 'set_email' %}" class="settings-link">Изменить почту</a></div>
+<div class="settings-button"><a href="{% url 'set_pass' %}" class="settings-link">Установить пароль</a></div>
+
+{% endblock %}
+
+{% block settings-section %}
+
+<h1 class="title-settings">Редактирование профиля</h1>
+<form class="settings-form">
+    <ul class="settings-list">
+        <li class="settings-form-item">
+            <label for="" class="form-settings-label">Ваш логин</label>
+            <input type="text" name="" id="" class="form-input height-40">
+        </li>
+        <li class="settings-form-item">
+            <label for="" class="form-settings-label">Язык</label>
+            <div class="settings-dropdown">
+                <a class="dropdown-toggle dropdown-settings-btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Русский
+                    <img src="{% static 'Main_static/svg/header_svg/Arrow_down.svg' %}" alt="arrow down">
+                </a>
+                <ul class="dropdown-menu settings-dropdown-menu">
+                    <li><a href="#" class="dropdown-item settings-item-drop">English</a></li>
+                    <li><a href="#" class="dropdown-item settings-item-drop">Português</a></li>
+                    <li><a href="#" class="dropdown-item settings-item-drop">Español</a></li>
+                    <li><a href="#" class="dropdown-item settings-item-drop">Беларуская</a></li>
+                    <li><a href="#" class="dropdown-item settings-item-drop">Deutsch</a></li>
+                    <li><a href="#" class="dropdown-item settings-item-drop">Русский</a></li>
+                    <li><a href="#" class="dropdown-item settings-item-drop">Українська</a></li>
+                    <li><a href="#" class="dropdown-item settings-item-drop">日本人</a></li>
+                    <li><a href="#" class="dropdown-item settings-item-drop">简体中文</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="settings-form-item">
+            <label for="" class="form-settings-label">Город</label>
+            <input type="text" name="" id="" class="form-input height-40">
+        </li>
+        <li class="settings-form-item">
+            <label for="" class="form-settings-label">Краткая биография</label>
+            <textarea type="text" name="" id="" class="form-input height-100"></textarea>
+        </li>
+        <li class="settings-form-item">
+            <label for="" class="form-settings-label">Обо мне</label>
+            <textarea type="text" name="" id="" class="form-input height-150"></textarea>
+        </li>
+    </ul>
+    <button type="submit" class="submit-settings-btm">Сохранить изменения</button>
+
+    <!-- ЗОНА ГДЕ МЕНЯТЬ АВАТАРКУ -->
+
+</form>
+
+{% endblock %}
