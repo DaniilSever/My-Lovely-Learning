@@ -21,7 +21,7 @@ urlpatterns = [
     path('logout/', logout_user, name='logout'),
     path('settings/profile', main_settings, name='settings'),
     path('settings/email', email_settings, name='set_email'),
-    path('settings/pass', pass_settings, name='set_pass')
+    path('settings/pass', PasswordChangeView.as_view(), name='set_pass')
 ]   
 
 if settings.DEBUG: 

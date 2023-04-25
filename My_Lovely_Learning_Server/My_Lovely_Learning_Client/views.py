@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, Http404
 from django.views.generic import CreateView, DeleteView, ListView
-from django.contrib.auth.views import LoginView 
+from django.contrib.auth.views import LoginView, PasswordChangeView
 from django.contrib.auth import logout, login
 from django.urls import reverse_lazy
 
@@ -41,6 +41,11 @@ class LoginUser(LoginView):
     
     def get_success_url(self) -> str:
         return reverse_lazy('main')
+    
+class PasswordChangeView(PasswordChangeView):
+    form_class = PasswordsChangeForm
+    success_url = reverse_lazy('main')
+    template_name = "My_Lovely_Learning_templates/settings_password.html"
 
 def my_cource(request):
     return render(request, 'My_Lovely_Learning_templates/user_learn_cource.html')
