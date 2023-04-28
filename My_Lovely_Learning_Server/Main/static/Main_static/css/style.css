@@ -41,7 +41,7 @@ a {
 ul {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-type: none;
 }
 
 h1, h3, h5, p {
@@ -295,7 +295,7 @@ textarea {
 /* footer */
 
 .footer-container {
-    display: flex;
+    display: block;
     width: 100%;
     justify-content: center;
     background-color: var(--color-main);
@@ -821,6 +821,7 @@ textarea {
 
 .profile-container {
     display: flex;
+    min-height:83.9%;
     flex-direction: column;
     align-items: center;
 }
@@ -939,6 +940,11 @@ textarea {
 }
 
 /* settings */
+
+
+.settings-container {
+    min-height:83.9%;
+}
 
 .settings-menu{
     display: flex;
@@ -1123,6 +1129,10 @@ textarea {
 
 /* user cource */
 
+.learn-container {
+    min-height:83.9%;
+}
+
 .learn-dropdown-menu {
     background-color: var(--color-block);
     border: var(--main-border-size) solid var(--color-border);
@@ -1239,5 +1249,94 @@ textarea {
 }
 
 .learn-cource:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/* condition */
+
+.condition-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.condition {
+    display: flex;
+    width: 1200px;
+    padding-top: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.condition-title {
+    margin-bottom: 50px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+}
+
+.main-title {
+    margin-bottom: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+}
+
+.privacy-title:first-child{
+    margin-bottom: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+}
+
+.condition-content {
+    width: 1200px;
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+}
+
+.condition-content:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.condition-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.condition-list {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    list-style-type: decimal;
+}
+
+.condition-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+}
+
+.condition-item:not(:last-child) {
     margin-bottom: 15px;
 }
