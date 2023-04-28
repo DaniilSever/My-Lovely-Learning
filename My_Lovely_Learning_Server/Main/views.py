@@ -12,11 +12,9 @@ from .models import *
 
 # Create your views here.
 
-def index(request):
-    if request.method == 'post':
-       pass
-
-    return render(request, 'Main_templates/home.html')
+def index(request): 
+    alpatch = all_patch.objects.all()
+    return render(request, 'Main_templates/home.html', {'info': alpatch})
 
 class RegisterUser(CreateView):
     form_class = regUserForm

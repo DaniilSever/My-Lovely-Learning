@@ -21,3 +21,7 @@ class Tasks_table(models.Model):
     answer = models.TextField(blank=True)
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
+
+class all_patch(models.Model):
+    title = models.DateField()
+    content = models.TextField(blank=False)
