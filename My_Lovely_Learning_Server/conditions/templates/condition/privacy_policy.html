@@ -1,0 +1,12 @@
+{% extends 'Main_templates/base.html' %}
+{% load static %}
+{% block main_content %}
+
+{% for i in info %}
+    <h1 class="title">{{i.title}}</h1>
+
+    <span class="content">{{i.content}}</span>
+
+{% endfor %}
+
+{% endblock %}
