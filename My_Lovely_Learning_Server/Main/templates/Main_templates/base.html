@@ -33,7 +33,7 @@
                                 <a href="{% url 'user_cource' %}" class="nav-link">Мое обучение</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Преподавателям</a>
+                                <a href="{% url 'teach' %}" class="nav-link">Преподавателям</a>
                             </li>
                         </ul>
                     {% else %}
@@ -42,7 +42,7 @@
                                 <a href="{% url 'main' %}" class="nav-link">Каталог</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Преподавателям</a>
+                                <a href="{% url 'teach' %}" class="nav-link">Преподавателям</a>
                             </li>
                         </ul>
                     {% endif %}

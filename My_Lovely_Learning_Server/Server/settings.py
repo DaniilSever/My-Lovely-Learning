@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'settings.apps.SettingsConfig',
     'my_course.apps.MyCourseConfig',
     'conditions.apps.ConditionsConfig',
+    'teachers.apps.TeachersConfig',
 
 ]
 
