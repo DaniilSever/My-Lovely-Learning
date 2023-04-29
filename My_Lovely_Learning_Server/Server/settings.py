@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'my_course.apps.MyCourseConfig',
     'conditions.apps.ConditionsConfig',
     'teachers.apps.TeachersConfig',
+    'edit_learn.apps.EditLearnConfig',
 
 ]
 
