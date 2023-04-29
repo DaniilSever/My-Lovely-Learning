@@ -10,6 +10,7 @@ urlpatterns = [
     path('reg/', RegisterUser.as_view(), name='registr'),
     path('profile/', profile, name='profile'),
     path('logout/', logout_user, name='logout'),
+    path('accounts/profile/', redirectMe),
 ]   
 
 if settings.DEBUG: 

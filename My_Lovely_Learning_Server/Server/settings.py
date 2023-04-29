@@ -27,8 +27,13 @@ SECRET_KEY = 'django-insecure-ykp8^b_0n2bdhbgg5i*3xyp)7l&@!6@-(9j&lfuok+h^(t9df1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mylovely.com', 'localhost', '127.0.0.1']
 
+SOCIAL_AUTH_GITHUB_KEY = '89a11e03f90d8445a20d'
+SOCIAL_AUTH_GITHUB_SECRET = 'a9821f0a3fac5d39fcf073a6af2ea8a684bdd8d0'
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = '51629638'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'rol5YZhp3pGGbvgutnP6'
 
 # Application definition
 
@@ -45,7 +50,8 @@ INSTALLED_APPS = [
     'conditions.apps.ConditionsConfig',
     'teachers.apps.TeachersConfig',
     'edit_learn.apps.EditLearnConfig',
-
+    'social_django',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
@@ -108,6 +114,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.vk.VKOAuth2',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

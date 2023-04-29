@@ -760,6 +760,7 @@ cursor: pointer;
 .reg_container {
     display: flex;
     align-items: center;
+    min-height: 83.9%;
 }
 
 .reg-main {
@@ -767,7 +768,6 @@ cursor: pointer;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
 }
 
 .reg-form {

@@ -26,4 +26,5 @@ urlpatterns = [
     path('condition/', include('conditions.urls')),
     path('teachers/', include('teachers.urls')),
     path('edit-learn/', include('edit_learn.urls')),
+    path('social-auth/', include('social_django.urls', namespace='social')),
 ]

@@ -120,8 +120,8 @@
                         </div>
                     </form>
                     <div class="popup-social">
-                        <a href="#" class="vk"><img src="{% static 'Main_static/svg/popup_svg/vk_svg.svg' %}" alt="vk"></a>
-                        <a href="#" class="google"><img src="{% static 'Main_static/svg/popup_svg/google.svg' %}" alt="google"></a>
+                        <a href="{% url "social:begin" "vk-oauth2" %}"><img src="{% static 'Main_static/svg/popup_svg/vk_svg.svg' %}" alt="vk"></a>
+                        <a href="{% url "social:begin" "github" %}"><img src="{% static 'Main_static/svg/popup_svg/github.svg' %}" alt="github"></a>
                     </div>
                 </div>
             </div>
@@ -297,4 +297,4 @@
     <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
     <script src="{% static 'Main_static/js/script.js' %}"></script>
 </body>
-</html>
+</html> 
