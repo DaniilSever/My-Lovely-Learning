@@ -6,6 +6,7 @@ from .views import *
 
 urlpatterns = [
     path('', teachers_main, name='teach'),
+    path('analytics', teachers_analytics, name='analytics'),
 ]   
 
 if settings.DEBUG: 

@@ -517,6 +517,30 @@ cursor: pointer;
     margin-bottom: 25px;
 }
 
+/* autor popup */
+
+.autor-popup-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.autor-popup {
+    font-size: 25px;
+}
+
+.autor-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    background-color: var(--color-interactiv);
+    color: var(--color-white);
+    border-radius: var(--30-border-radius);
+}
+
 /* home */
 
 .home-container {
@@ -1355,5 +1379,107 @@ cursor: pointer;
 }
 
 .condition-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/* teachers */
+
+.teachers-container {
+    min-height: 83.9%;
+}
+
+.teachers-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 250px;
+    height: 150px;
+}
+
+.teachers-zone {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    align-items: center;
+}
+
+.teachers-section {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    justify-content: space-between;
+}
+
+.teachers-link {
+    position: fixed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+}
+
+.teachers-link:hover {
+    color: var(--color-dark)
+}
+
+.teachers-active,
+.teachers-active:hover {
+    color: var(--color-interactiv);
+}
+
+.teachers-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 18px;
+
+    color: var(--color-dark);
+    margin-bottom: 30px;
+}
+
+.form-teachers-search {
+    display: flex;
+    align-items: center; 
+    width: 260px;
+    padding-left: 5px;
+    background-color: var(--color-block);
+    border: var(--main-border-size) solid var(--color-border);
+    border-radius: var(--15-border-radius);
+    margin-bottom: 30px;
+}
+
+.input-teachers-search {
+    background-color: var(--color-block);
+    border: 0;
+    outline: none;
+    border-radius: var(--15-border-radius);
+}
+
+.teachers-button-search {
+    border: 0;
+    height: 30px;
+    color: var(--color-white);
+    background: var(--color-interactiv);
+    border-radius: 8px;
+    margin-left: 15px;
+}
+
+.teachers-cource-output {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin-bottom: 40px;
+}
+
+.teachers-cource {
+    height: 50px;
+    background-color: var(--color-block);
+    border: var(--main-border-size) solid var(--color-border);
+    border-radius: var(--30-border-radius);
+}
+
+.teachers-cource:not(:last-child) {
     margin-bottom: 15px;
 }

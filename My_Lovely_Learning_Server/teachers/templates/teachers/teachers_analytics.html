@@ -1,0 +1,26 @@
+{% extends 'teachers/teachers_template.html' %}
+{% load static %}
+
+
+{% block teachers-menu %}
+<div class="teachers-button"><a href="{% url 'teach' %}" class="teachers-link">Уроки</a></div>
+<div class="teachers-button"><h1 class="teachers-link teachers-active">Аналитика</h1></div>
+{% endblock %}
+
+{% block teachers-output %}
+
+<h1 class="teachers-title">Аналитика</h1>
+<form class="form-teachers-search" role="search">
+    <img src="{% static 'Main_static/svg/header_svg/search_logo.svg' %}" alt="search" class="search-logo">
+    <input class="input-teachers-search" type="search" placeholder="Поиск..." aria-label="Search">
+    <button type="submit" class="teachers-button-search">Искать</button>
+</form>
+<section class="teachers-cource-output">
+    <div class="teachers-cource"></div>
+    <div class="teachers-cource"></div>
+    <div class="teachers-cource"></div>
+    <div class="teachers-cource"></div>
+    <div class="teachers-cource"></div>
+</section>
+
+{% endblock %}
