@@ -1,17 +1,16 @@
 #:kivy 2.1.0
 <Catalog>:
     AnchorLayout:
-        size_hint: 1,.1
-        anchor_x: 'center'
+        anchor_x: 'left'
         anchor_y: 'top'
-        BoxLayout:
-            orientation:'horizontal'
+        Button:
+            text: 'Burger'
+            size_hint: .5,.1
 
-            Button:
-                text: 'Burger'
-                size_hint: .1,1
-
-            DropDown:
-                auto_width: False
-                Button:
-                    text: 'Profile'
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y: 'top'
+        Button:
+            id: dropdown_profile
+            text: 'Profile'
+            size_hint: .5,.1
