@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">My Lovely Learning</string>
-    <string name="private_version">ed4b626c1653dc44688a6c911833e26d8d2edfa9</string>
-    <string name="presplash_color">#000000</string>
-    <string name="urlScheme">kivy</string>
-</resources>
