@@ -5,7 +5,7 @@ import { gStyle } from '../styles/style';
 export default function Catalog() {
     return (
       <View style={gStyle.container}>
-        <Text>Catalog</Text>
+        <Text>Profile</Text>
         <StatusBar style="auto" />
       </View>
     );
