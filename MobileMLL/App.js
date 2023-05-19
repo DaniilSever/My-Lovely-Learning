@@ -17,32 +17,12 @@ import Settings from './components/Settings'
 
 import Course from './components/Cource/Cource_1';
 
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
 function HomeScreen() {
-  const Stack = createNativeStackNavigator();
   return (
-    <Stack.Navigator>
-      <Stack.Screen name='Catalog' component={Catalog} options={{headerShown: false}}/>
-      <Stack.Screen name='Course' component={Course} />
-    </Stack.Navigator>
-  );
-}
-
-function PofileScreen() {
-  const Stack = createNativeStackNavigator();
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
-      <Stack.Screen name="Settings" component={Settings}/>
-    </Stack.Navigator>
-  );
-}
-
-export default function App() {
-  const Tab = createBottomTabNavigator();
-
-  return (
-    <NavigationContainer>
-      <Tab.Navigator
+    <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -62,9 +42,21 @@ export default function App() {
           tabBarInactiveTintColor: 'gray',
         })}
       >
-        <Tab.Screen name="Catalog" component={HomeScreen} options={{headerShown: false}}/>
-        <Tab.Screen name="Profile" component={PofileScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Catalog" component={Catalog} options={{headerShown: false}}/>
+        <Tab.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
       </Tab.Navigator>
+  );
+}
+
+export default function App() {
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name='Home' component={HomeScreen} options={{headerShown: false}}/>
+        <Stack.Screen name='Course' component={Course} />
+        <Stack.Screen name="Settings" component={Settings}/>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
