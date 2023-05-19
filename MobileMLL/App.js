@@ -32,8 +32,8 @@ export default function App() {
           tabBarInactiveTintColor: 'gray',
         })}
       >
-        <Tab.Screen name="Catalog" component={Catalog} />
-        <Tab.Screen name="Profile" component={Profile} />
+        <Tab.Screen name="Catalog" component={Catalog} options={{headerShown: false}}/>
+        <Tab.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
