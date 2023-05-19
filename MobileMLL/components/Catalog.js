@@ -1,16 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import { gStyle } from '../styles/style';
+import { Button, StyleSheet, Image, Text, TouchableOpacity, View } from 'react-native';
+
+import { gStyle, StyleCatalog } from '../styles/style';
 
 
 export default function Catalog({ navigation }) {
     return (
       <View style={gStyle.container}>
-        <Text>Catalog</Text>
-        <Button 
-          title="Course"
-          onPress={() => navigation.navigate('Course')}
-        />
+        <TouchableOpacity
+          style={StyleCatalog.container}
+          onPress={()=> navigation.navigate('Course')}>
+            {/* ----------------Контайнер представления курса------------- */}
+            <View style={StyleCatalog.insideContainer}>
+              <Image
+                // source={}
+              />
+              <Text style={StyleCatalog.textCatalog}></Text>
+            </View>
+            {/* ---------------------------------------------------------- */}
+        </TouchableOpacity>
         <StatusBar style="auto" />
       </View>
     );
