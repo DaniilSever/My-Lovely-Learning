@@ -15,7 +15,7 @@ import Settings from './components/Settings'
 
 // Cources
 
-import Course from './components/Cource/Cource_1';
+import Course from './components/Course/Course_1';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
