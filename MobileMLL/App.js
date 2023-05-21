@@ -16,6 +16,8 @@ import Settings from './components/Settings'
 // Cources
 
 import Course from './components/Course/Course_1';
+import { Login } from './components/Login';
+import { AuthProvider } from './components/context/AuthContext';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -46,17 +48,27 @@ function HomeScreen() {
         <Tab.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
       </Tab.Navigator>
   );
-}
+};
 
-export default function App() {
-
+function Navigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name='Login' component={Login} options={{headerShown: false}} />
+
         <Stack.Screen name='Home' component={HomeScreen} options={{headerShown: false}}/>
         <Stack.Screen name='Course' component={Course} />
         <Stack.Screen name="Settings" component={Settings}/>
       </Stack.Navigator>
     </NavigationContainer>
+  );
+}
+
+export default function App() {
+
+  return (
+    <AuthProvider>
+      <Navigation/>
+    </AuthProvider>
   );
 }
