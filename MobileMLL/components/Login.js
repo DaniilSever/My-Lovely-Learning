@@ -16,13 +16,11 @@ export function Login() {
                 <View style={StyleLogin.loginForm}>
                     <TextInput 
                         style={StyleLogin.input} 
-                        value="email"
                         placeholder="Введите почту"
                         onChangeText={text => setEmail(text)}
                     />
                     <TextInput 
                         style={StyleLogin.input} 
-                        value="password"
                         placeholder="Введите пароль"
                         onChangeText={text => setPassword(text)}
                     />
