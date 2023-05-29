@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity} from "react-native";
 import { Global, Register } from '../../styles/style';
+import { AuthContext } from '../context/AuthContext';
+import Spinner from 'react-native-loading-spinner-overlay';
 
-export function Reg({navigation}) {
-    const [username, setUsername] = useState(null)
-    const [email, setEmail] = useState(null)
-    const [password, setPassword] = useState(null)
+export function Registration({navigation}) {
+    const [username, setUsername] = useState(null);
+    const [email, setEmail] = useState(null);
+    const [password, setPassword] = useState(null);
+
+    const {isLoading, register} = useContext(AuthContext);
 
     return (
         <View style={Global.container}>
+            <Spinner visible={isLoading} />
             <View style={Register.container}>
                 <View style={Register.registerform}>
                     <TextInput
@@ -33,7 +38,9 @@ export function Reg({navigation}) {
                     />
                     <TouchableOpacity
                         style={Register.button}
-                        onPress={()=> {}}
+                        onPress={()=> {
+                            register(username, email, password)
+                        }}
                     >
                         <Text style={Register.btntext}>Зарегистрироваться</Text>
                     </TouchableOpacity>

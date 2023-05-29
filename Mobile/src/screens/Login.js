@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity} from "react-native";
 import { Auth, Global } from '../../styles/style';
+import { AuthContext } from '../context/AuthContext';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 export function Login({navigation}) {
     const [email, setEmail] = useState(null)
     const [password, setPassword] = useState(null)
 
+    const {isLoading, login} = useContext(AuthContext)
+
     return (
         <View style={Global.container}>
+            <Spinner visible={isLoading} />
             <View style={Auth.container}>
                 <View style={Auth.loginform}>
                     <TextInput 
@@ -26,7 +31,9 @@ export function Login({navigation}) {
                     />
                     <TouchableOpacity
                         style={Auth.button}
-                        onPress={()=> {}}
+                        onPress={()=> {
+                            login(email, password)
+                        }}
                     >
                         <Text style={Auth.btntext}>Войти</Text>
                     </TouchableOpacity>
