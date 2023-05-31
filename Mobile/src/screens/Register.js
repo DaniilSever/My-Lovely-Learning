@@ -39,7 +39,10 @@ export function Registration({navigation}) {
                     <TouchableOpacity
                         style={Register.button}
                         onPress={()=> {
-                            register(username, email, password)
+                            register(username, email, password);
+                            if (isLoading == false) {
+                                navigation.navigate('Login')
+                            }
                         }}
                     >
                         <Text style={Register.btntext}>Зарегистрироваться</Text>

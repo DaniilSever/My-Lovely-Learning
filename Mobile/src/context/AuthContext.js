@@ -12,7 +12,7 @@ export const AuthProvider = ({children}) => {
     const register = (username, email, password) => {
         setIsLoading(true)
         axios
-            .post(`${BASE_URL}/create`, {
+            .post(`${BASE_URL}create/`, {
                 username,
                 email,
                 password,
@@ -22,7 +22,6 @@ export const AuthProvider = ({children}) => {
                 setUserInfo(userInfo);
                 AsyncStorage.setItem('userInfo', JSON.stringify(userInfo));
                 setIsLoading(false);
-                console.log(userInfo)
             })
             .catch(e => {
                 console.log(`register error ${e}`);
@@ -30,17 +29,16 @@ export const AuthProvider = ({children}) => {
             });
     };
 
-    const login = (email, password) => {
+    const login = (username, password) => {
         setIsLoading(true);
     
         axios
-            .post(`${BASE_URL}/login`, {
-                email,
+            .post(`${BASE_URL}login/`, {
+                username,
                 password,
             })
             .then(res => {
                 let userInfo = res.data;
-                console.log(userInfo);
                 setUserInfo(userInfo);
                 AsyncStorage.setItem('userInfo', JSON.stringify(userInfo));
                 setIsLoading(false);

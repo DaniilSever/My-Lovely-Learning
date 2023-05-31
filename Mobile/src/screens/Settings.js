@@ -2,14 +2,11 @@ import React from 'react';
 import { View, Text } from "react-native";
 import { Global, Home } from '../../styles/style';
 
-// Catalog
-import { CatalogScreen } from './Catalog';
-
-export function HomeScreen() {
+export function SettingsScreen() {
     return (
         <View style={Global.container}>
-            <View style={Home.container}>
-                <CatalogScreen/>
+            <View>
+                <Text>Настройки</Text>
             </View>
         </View>
     );

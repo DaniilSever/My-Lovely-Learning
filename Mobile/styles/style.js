@@ -117,3 +117,70 @@ export const Register = StyleSheet.create({
         fontSize: 16,
     }
 });
+
+export const Home = StyleSheet.create({
+    container: {
+        paddingTop: 50,
+    }, 
+});
+
+export const Catalog = StyleSheet.create({
+    container: {
+        flexDirection: "column",
+        height: '100%',
+    },
+
+    CourseCatalog: {
+        width: '100%',
+        height: 50,
+        flexDirection: "row",
+        alignItems: "center",
+        paddingLeft: 15,
+        backgroundColor: '#E9E9E9',
+        borderColor: '#A7A7A7',
+        borderWidth: 1,
+        borderRadius: 30,
+        marginBottom: 10,
+    },
+
+});
+
+export const Profile = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#E9E9E9',
+    },
+
+    title: {
+        fontSize: 18,
+        textAlign: "center",
+    },
+
+    driverContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        height: 45,
+        width: 140,
+    }, 
+
+    menuBTN: {
+        flexDirection: "row",
+
+    },
+
+    menuContainer: {
+        paddingTop: 50,
+    }, 
+
+    line: {
+        width: '100%',
+        height: 1,
+        backgroundColor: "#555555",
+    },
+
+    menuTitle: {
+        paddingLeft: 15,
+        fontSize: 24,
+        color: '#555555',
+    },
+});

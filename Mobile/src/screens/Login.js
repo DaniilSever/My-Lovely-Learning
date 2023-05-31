@@ -5,7 +5,7 @@ import { AuthContext } from '../context/AuthContext';
 import Spinner from 'react-native-loading-spinner-overlay';
 
 export function Login({navigation}) {
-    const [email, setEmail] = useState(null)
+    const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null)
 
     const {isLoading, login} = useContext(AuthContext)
@@ -17,9 +17,9 @@ export function Login({navigation}) {
                 <View style={Auth.loginform}>
                     <TextInput 
                         style={Auth.input}
-                        value={email}
+                        value={username}
                         placeholder='Введите почту'
-                        onChangeText={text => setEmail(text)}
+                        onChangeText={text => setUsername(text)}
                     
                     />
                     <TextInput 
@@ -32,7 +32,7 @@ export function Login({navigation}) {
                     <TouchableOpacity
                         style={Auth.button}
                         onPress={()=> {
-                            login(email, password)
+                            login(username, password)
                         }}
                     >
                         <Text style={Auth.btntext}>Войти</Text>
