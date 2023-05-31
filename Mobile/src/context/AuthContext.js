@@ -49,6 +49,29 @@ export const AuthProvider = ({children}) => {
             });
     };
 
+    const logout = () => {
+        setIsLoading(true);
+    
+        axios
+          .post(
+            `${BASE_URL}logout/`,
+            {},
+            {
+              headers: {Authorization: `Bearer ${userInfo.access_token}`},
+            },
+          )
+          .then(res => {
+            console.log(res.data);
+            AsyncStorage.removeItem('userInfo');
+            setUserInfo({});
+            setIsLoading(false);
+          })
+          .catch(e => {
+            console.log(`logout error ${e}`);
+            setIsLoading(false);
+          });
+      };
+
     return (
         <AuthContext.Provider value={{
             isLoading,

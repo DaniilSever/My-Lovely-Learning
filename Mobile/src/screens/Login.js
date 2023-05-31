@@ -18,7 +18,7 @@ export function Login({navigation}) {
                     <TextInput 
                         style={Auth.input}
                         value={username}
-                        placeholder='Введите почту'
+                        placeholder='Введите логин'
                         onChangeText={text => setUsername(text)}
                     
                     />

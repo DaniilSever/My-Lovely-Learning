@@ -23,7 +23,7 @@ export function Navigation() {
                 (
                     <>
                         <Stack.Screen name="Start" component={TabNavigations} options={{headerShown: false}}/>
-                        <Stack.Screen name="Settings" component={SettingsScreen}/>
+                        <Stack.Screen name="Settings" component={SettingsScreen} options={{headerShown: false}}/>
                     </>
                 )
                 :
