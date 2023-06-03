@@ -8,7 +8,7 @@ from api.utils import make_slug
 class LessonContentSerializer(serializers.ModelSerializer):
     class Meta:
         model = LessonContent
-        fields = ('order', 'item')
+        fields = "__all__"
 
 class LessonSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(required=False)

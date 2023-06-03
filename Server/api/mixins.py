@@ -1,30 +1,26 @@
-from rest_framework import authentication
 from edit_course_zone.models import Course
 from api.serializers.course_serializers import *
 from api.permissions import IsOwnerOrReadOnlyCourse
 
-class AuthorizedMixin:
-    authentication_classes = (authentication.TokenAuthentication,)
-
-class CourseOwnerMixin(AuthorizedMixin):
+class CourseOwnerMixin:
     permission_classes = (IsOwnerOrReadOnlyCourse,)
 
-class CourseMixin(AuthorizedMixin):
+class CourseMixin:
     serializer_class = CourseSerializer
     queryset = Course.objects.all()
 
-class ChapterMixin(AuthorizedMixin):
+class ChapterMixin:
     serializer_class = ChapterSerializer
     queryset = Chapter.objects.all()
 
-class SubchapterMixin(AuthorizedMixin):
+class SubchapterMixin:
     serializer_class = SubchapterSerializer
     queryset = Subchapter.objects.all()
 
-class LessonMixin(AuthorizedMixin):
+class LessonMixin:
     serializer_class = LessonSerializer
     queryset = Lesson.objects.all()
 
-class LessonContentMixin(AuthorizedMixin):
+class LessonContentMixin:
     serializer_class = LessonContentSerializer
     queryset = LessonContent.objects.all()

@@ -8,6 +8,8 @@ urlpatterns = [
     path('create/', CreateCourse.as_view(), name="create_course"),
     path('delete/<int:pk>/', DeleteCourse.as_view(), name="delete_course"),
     path('<int:pk>/', RetrieveUpdateCourse.as_view(), name="retrieve_course"),
+    path('list/', ListCourse.as_view(), name='list_course'),
+    path('<int:course_pk>/join/', JoinCourse.as_view(), name="join_course"),
     
     path('<int:course_id>/add_chapter/', AddChapter.as_view(), name="add_chapter"),
     path('delete_chapter/<int:pk>/', DeleteChapter.as_view(), name="delete_chapter"),
@@ -25,4 +27,5 @@ urlpatterns = [
     path('add_lesson_content/<int:lesson_id>/<str:lesson_content_type>/', AddLessonContent.as_view(), name="add_lesson_content"),
     path('delete_lesson_content/<int:pk>/', DeleteLessonContent.as_view(), name="delete_lesson_content"),
     path('lesson_content/<int:pk>/', RetrieveUpdateLessonContent.as_view(), name="retrieve_lesson_content"),
+    path('view_lesson_content/<int:pk>/', ViewLessonContent.as_view(), name="view_lesson_content")
 ]
