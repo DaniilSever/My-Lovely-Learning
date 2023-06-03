@@ -9,7 +9,6 @@ export function profile() {
         <View style={Global.container}>
             <View style={ScreenProfile.container}>
                 <ScrollView style={ScreenProfile.activeContainer}>
-
                     {/* добавить цикл с выводом курсов */}
                     <TouchableOpacity 
                         style={ScreenProfile.CourseActive}    

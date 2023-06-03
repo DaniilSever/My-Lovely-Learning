@@ -11,6 +11,7 @@ import { Registration } from "./screens/Register";
 import { HomeScreen } from "./screens/Home";
 import { ProfileScreen } from "./screens/Profile"
 import { SettingsScreen } from "./screens/Settings"
+import { CourceScreen } from "./screens/Courses/Cource-Info";
 
 export function Navigation() {
     const Stack = createStackNavigator()
@@ -68,5 +69,15 @@ function TabNavigations() {
         <Tab.Screen name="Каталог" component={HomeScreen} options={{headerShown: false}}/>
         <Tab.Screen name="Профиль" component={ProfileScreen} options={{headerShown: false}}/>
       </Tab.Navigator>
+    );
+};
+
+function CatalogScreen() {
+    const Stack = createStackNavigator()
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="Catalog" component={CatalogScreen}/>
+            <Stack.Screen name="Course" component={CourceScreen}/>
+        </Stack.Navigator>
     );
 };

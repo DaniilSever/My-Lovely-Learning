@@ -3,12 +3,15 @@ import { ScrollView, Text, TouchableOpacity } from "react-native";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Catalog } from '../../styles/style';
 
-export function CatalogScreen() {
+export function CatalogScreen({navigation}) {
     return (
         <ScrollView style={Catalog.container}>
             {/* добавить цикл с выводом курсов */}
             <TouchableOpacity 
-                style={Catalog.CourseCatalog}    
+                style={Catalog.CourseCatalog}
+                onPress={() => {
+                    navigation.navigate("Course")
+                }}
             >
                 <Ionicons name={'arrow-forward-circle'} size={32} color={'#A7A7A7'} />
                 <Text style={Catalog.Text}></Text>

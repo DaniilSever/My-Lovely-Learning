@@ -65,6 +65,7 @@ export const Auth = StyleSheet.create({
 
     text: {
         fontSize: 16,
+        marginRight: 10,
     }
 });
 
@@ -115,6 +116,7 @@ export const Register = StyleSheet.create({
 
     text: {
         fontSize: 16,
+        marginRight: 10,
     }
 });
 
@@ -160,12 +162,13 @@ export const Profile = StyleSheet.create({
         textAlign: "center",
         color: "#555555",
         fontWeight: "bold",
+        paddingLeft: 14,
     },
 
     driverContainer: {
         flexDirection: "row",
         alignItems: "center",
-        paddingLeft: 15,
+        paddingLeft: 12,
         height: 50,
         width: 200,
     }, 
@@ -268,6 +271,7 @@ export const Settings = StyleSheet.create({
         textAlign: "center",
         color: "#555555",
         fontWeight: "bold",
+        paddingLeft: 14,
     },
 
     driverContainer: {
