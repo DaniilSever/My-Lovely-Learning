@@ -1,0 +1,33 @@
+{% extends 'Main_templates/base.html' %}
+{% load static %}
+{% load new_tags %}
+{% block main_content %}
+
+<section class="condition-container container">
+    {% for i in info %}
+        <div class="condition">
+            {% if i.id == 1 %}
+                <h1 class="condition-title main-title">{{i.title}}</h1>
+                {% for item in i.content|split %}
+                    <div class="condition-content">
+                        {{item}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="condition-block">
+                {% if i.id > 1 %}
+                    <h1 class="condition-title"> {{i.title}} </h1>
+                    {% for item in i.content|split %}
+                        <div class="condition-item">
+                            {{item}}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+        </div>
+        
+    {% endfor %}
+</section>
+
+{% endblock %}
