@@ -1,6 +1,6 @@
 from django.urls import path
 from api.views.course_views import *
-from edit_course_zone.models import lesson_content_types
+from courses.models import lesson_content_types
 
 app_name = "course_api"
 

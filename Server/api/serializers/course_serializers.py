@@ -1,5 +1,5 @@
 from rest_framework import serializers, validators
-from edit_course_zone.models import *
+from courses.models import *
 from django.contrib.auth.models import User
 from taggit.serializers import TagListSerializerField, TaggitSerializer
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
@@ -13,6 +13,9 @@ from api.constants import AVAILABLE_LESSON_CONTENT_MODELS
 class LessonContentRelatedField(serializers.RelatedField):
     def to_representation(self, value):
         if isinstance(value, AVAILABLE_LESSON_CONTENT_MODELS):
+            if isinstance(value, Image):
+                return {"content_type": value._meta.model_name} | \
+                    { "id": value.id,"file": value.file.url }
             return {"content_type": value._meta.model_name} | \
                 { field.name : getattr(value, field.name) for field in value._meta.fields }
         return super().to_representation(value)
@@ -64,8 +67,16 @@ class LessonSerializer(serializers.ModelSerializer):
         return l_c_objects
     
     def create(self, validated_data):
-        validated_data['slug'] = make_slug(validated_data['theme'])
+        if validated_data.get('theme'):
+            validated_data['slug'] = make_slug(validated_data['theme'])
         return super().create(validated_data)
+    
+    def update(self, instance, validated_data):
+        if validated_data.get("theme"):
+            instance.slug = make_slug(validated_data.get("theme"))
+        instance.theme = validated_data.get("theme", instance.theme)
+        instance.order = validated_data.get("order", instance.order)
+        return super().update(instance, validated_data)
 
 class SubchapterSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(required=False)

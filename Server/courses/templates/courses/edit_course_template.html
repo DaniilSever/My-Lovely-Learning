@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block main_content %}
+
+<section class="course-container container">
+    <div class="course-zone">
+        <div class="course-section">
+            <div class="course-menu">
+                {% block course_menu %}
+                {% endblock%}
+            
+            </div>
+            <div class="course-output">
+                {% block edit %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

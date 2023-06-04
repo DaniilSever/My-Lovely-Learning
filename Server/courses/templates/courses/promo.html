@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}{{course.title}}{% endblock title %}
+
+{% block main_content %}
+<section class="promo-container">
+    <div class="promo-output">
+        <div class="course-header">
+            <h1 class="promo-title">{{ course.title }}</h1>
+            <img class="promo-img" src="{{ course.header_photo.url }}">
+        </div>
+    
+        <div class="course-description">
+            <h1 class=promo-description-title>Описание курса</h1>
+            <div class="description-output">{{ course.description }}</div>
+        </div>
+    
+        <input type="hidden" id="join-url" data-url="{% url 'api:course_api:join_course' course_pk %}">
+        <input type="hidden" id="first-lesson-url" data-url="{% url 'courses:lesson' first_lesson_pk %}">
+    
+        {% if request.user.is_authenticated %}
+            <button class='join-the-course-btn'>Записаться на курс</button>
+        {% endif %}
+    </div>
+</section>
+    
+
+{% endblock main_content %}
+
+{% block script %}
+
+<script type="text/javascript" src="{% static "/courses/js/promo.js" %}"></script>
+
+{% endblock script %}

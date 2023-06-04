@@ -1,9 +1,0 @@
-{% extends 'courses/edit_course_template.html' %}
-
-{% block edit %}
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p}}
-    <button type="confirm">Создать</button>
-</form>
-{% endblock edit %}

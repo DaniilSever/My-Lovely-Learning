@@ -1,0 +1,39 @@
+{% extends 'courses/edit_course_template.html' %}
+
+{% block edit %}
+
+
+
+<div class="edit_course">
+    <h1 class="edit_course_title">Редактировать курс</h1>
+    <form class="edit_course_form" method='POST' enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        {% for f in form %}
+
+            {% if f.label == 'Описание' %}
+                <div class="description">
+                    <label class="form-label" for="{{ f.id_for_label }}">{{f.label}}</label>
+                    {{f}}
+                </div>
+            {% elif f.label == 'Шапка курса' %}
+                <div class="changefile">
+                    <label class="form-label" for="{{ f.id_for_label }}">{{f.label}}</label>
+                    {{f}}
+                </div>
+            {% else %}
+                <div class="edit_course-line">
+                    <label class="form-label" for="{{ f.id_for_label }}">{{f.label}}</label>
+                    {{f}}
+                </div>
+            {% endif %}
+
+        {% endfor %}
+
+        <button class="confirm-edit" type="confirm">Изменить</button>
+        <a class="edit-content-btn" href="{% url 'courses:edit_content' course_pk %}">Изменить содержание курса</a>
+    </form>
+    
+</div>
+
+{% endblock %}

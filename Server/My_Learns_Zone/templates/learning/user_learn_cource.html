@@ -1,0 +1,30 @@
+{% extends 'learning/user_learn_template.html' %}
+{% load learning_templatetags %}
+{% load static %}
+
+{% block learn-menu %}
+
+<div class="learn-button"><h1 class="learn-link learn-active">Мои курсы</h1></div>
+{% endblock %}
+
+{% block learn-section %}
+<h1 class="learn-title">Курсы</h1>
+<form class="form-learn-search" role="search">
+    <img src="{% static 'Main_static/svg/header_svg/search_logo.svg' %}" alt="search" class="search-logo">
+    <input class="input-learn-search" type="search" placeholder="Поиск..." aria-label="Search">
+    <button type="submit" class="learn-button-search">Искать</button>
+</form>
+<section class="learn-cource-output">
+    {% for course in courses %}
+        <div class="learn-cource">
+            <div class="learn-left">
+                <img class="learn-img" src="{{ course.course.header_photo.url }}">
+                <h1 class="learn-cource-title">{{ course.course.title }}</h1>
+            </div>
+            <button class="continue-of-corse" action="{{course|get_first_lesson}}">Продолжить</button>
+        </div>
+    {% endfor %}
+
+</section>
+
+{% endblock %}

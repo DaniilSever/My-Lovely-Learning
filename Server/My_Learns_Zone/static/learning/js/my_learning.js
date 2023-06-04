@@ -1,0 +1,1 @@
+// document.querySellector(".continue-of-corse").addEventListener("click")

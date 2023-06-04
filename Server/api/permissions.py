@@ -1,5 +1,5 @@
 from rest_framework import permissions
-from edit_course_zone.models import Course
+from courses.models import Course
 from api.views.course_views import *
 
 class IsOwnerOrReadOnlyCourse(permissions.BasePermission):    

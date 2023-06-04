@@ -1,10 +1,10 @@
 from rest_framework import generics, response, authentication, permissions, mixins
-from edit_course_zone.models import Course
+from courses.models import Course
 from api.serializers.course_serializers import *
 from api.mixins import *
 from rest_framework import status
 from django.contrib.contenttypes.models import ContentType
-from edit_course_zone.models import *
+from courses.models import *
 from django.db import IntegrityError
 from api.constants import AVAILABLE_LESSON_CONTENT_MODELS
 
@@ -12,9 +12,6 @@ from api.constants import AVAILABLE_LESSON_CONTENT_MODELS
 
 class CreateCourse(CourseMixin, generics.CreateAPIView):
     permission_classes = (permissions.IsAuthenticated,)
-    
-    def post(self, request, *args, **kwargs):
-        return super().post(request, *args, **kwargs)
 
 class DeleteCourse(CourseOwnerMixin, CourseMixin, generics.DestroyAPIView):
     lookup_field = 'pk'
@@ -24,6 +21,7 @@ class RetrieveUpdateCourse(CourseOwnerMixin, CourseMixin, generics.RetrieveUpdat
 
 class ListCourse(CourseOwnerMixin, CourseMixin, generics.ListAPIView):
     serializer_class = CourseListSerializer
+    queryset = Course.objects.filter(visibility=Course.VisibilityChoice.PUBLIC)
 
 class AddChapter(CourseOwnerMixin, ChapterMixin, generics.CreateAPIView):
     lookup_field = 'course_id'
@@ -91,6 +89,9 @@ class AddLessonContent(CourseOwnerMixin, LessonContentMixin, generics.CreateAPIV
             model = ContentType.objects.get(app_label="courses", model=kwargs.get("lesson_content_type")).model_class()
             if model in AVAILABLE_LESSON_CONTENT_MODELS:
                 create_model_instance_kwargs = { field.name : request.data.get(field.name) for field in model._meta.fields }
+                if model is Video:
+                    create_model_instance_kwargs['url'] = create_model_instance_kwargs['url'].replace("watch?v=", "embed/")
+                    print(create_model_instance_kwargs)
                 try:
                     instance = model.objects.create(**create_model_instance_kwargs)
                 except IntegrityError as ir:

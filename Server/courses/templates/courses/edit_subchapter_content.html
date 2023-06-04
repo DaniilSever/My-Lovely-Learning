@@ -1,0 +1,32 @@
+{% extends 'courses/edit_content.html' %}
+{% load static %}
+
+{% block subchapter_content %}
+
+<div class="subchapter_content-container">
+    <h1 class="title-edit-content-course">Редактировать урок</h1>
+
+    <input type="hidden" id="api-subchapter-link" data-url="{% url 'api:course_api:retrieve_subchapter' subchapter_pk %}">
+    <input type="hidden" id="api-add-lesson-link" data-url="{% url 'api:course_api:add_lesson' subchapter_pk %}">
+    <input type="hidden" id="api-compiler-link" data-url="{% url 'api:compiler_api:compile' %}">
+
+    <div class="subchapter-content">
+        <div class="lesson-switcher">
+        </div>
+        <div class="lesson-contents">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block script %}
+
+<script type="text/javascript" src="{% static "/courses/js/edit_content.js" %}"></script>
+<script type="text/javascript" src="{% static "/courses/js/edit_subchapter_content.js" %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+{% endblock script %}

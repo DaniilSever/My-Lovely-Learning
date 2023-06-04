@@ -1,5 +1,5 @@
 from rest_framework import serializers, response
-from edit_course_zone.models import Lesson
+from courses.models import Lesson
 from compiler.models import CompiledCode
 from django.contrib.auth.models import User
 

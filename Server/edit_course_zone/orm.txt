@@ -1,1 +1,0 @@
-Lesson.objects.filter(pk=7).values("subchapter__chapter__course__title", "subchapter__chapter__title", "subchapter__title")

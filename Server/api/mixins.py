@@ -1,4 +1,4 @@
-from edit_course_zone.models import Course
+from courses.models import Course
 from api.serializers.course_serializers import *
 from api.permissions import IsOwnerOrReadOnlyCourse
 

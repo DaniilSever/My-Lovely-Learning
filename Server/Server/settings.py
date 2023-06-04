@@ -46,12 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Import zone
-    'main_zone.apps.MainConfig',
-    'my_course_zone.apps.MyCourseConfig',
-    'settings_zone.apps.SettingsConfig',
-    'conditions_zone.apps.ConditionsConfig',
-    "edit_course_zone.apps.CoursesConfig",
-    "teachers_zone.apps.TeachingConfig",
+    'Main_Zone.apps.MainConfig',
+    'My_Learns_Zone.apps.LearningConfig',
+    'Settings_Zone.apps.SettingsConfig',
+    'Conditions_Zone.apps.ConditionsConfig',
+    "courses.apps.CoursesConfig",
+    "Teachers_Zone.apps.TeachingConfig",
     "compiler.apps.CompilerConfig",
     "api.apps.ApiConfig",
 

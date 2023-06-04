@@ -1,5 +1,5 @@
 from rest_framework import generics, views, response, authentication, permissions
-from edit_course_zone.models import Course, Code
+from courses.models import Course, Code
 from compiler.models import CompiledCode
 from api.serializers.compiler_serializers import CompilerSerializer
 from api.serializers.course_serializers import *
@@ -13,7 +13,6 @@ compiler_dir = settings.COMPILER_ROOT
 class CompileCodeView(generics.CreateAPIView):
     queryset = CompiledCode.objects.all()
     serializer_class = CompilerSerializer
-    authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
     
     def post(self, request, *args, **kwargs):
@@ -39,7 +38,7 @@ class CompileCodeView(generics.CreateAPIView):
             serializer = self.get_serializer(data={
                 "user": request.user.id,
                 #TODO: lesson
-                "language":language,
+                "language": language,
                 "user_code": user_input,
                 "code_execution_start": start_time,
                 "code_execution_end": end_time

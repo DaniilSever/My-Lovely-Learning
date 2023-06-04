@@ -18,12 +18,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main_zone.urls')),
-    path('', include('teachers_zone.urls')),
-    path('condition/', include('conditions_zone.urls')),
-    path('my_learn/', include('my_course_zone.urls')),
-    path('settings/', include('settings_zone.urls')),
-    path('course/', include("edit_course_zone.urls", namespace="courses")),
+    path('', include('Main_Zone.urls')),
+    path('', include('Teachers_Zone.urls')),
+    path('condition/', include('Conditions_Zone.urls')),
+    path('my_learn/', include('My_Learns_Zone.urls')),
+    path('settings/', include('Settings_Zone.urls')),
+    path('course/', include("courses.urls", namespace="courses")),
     path('api/v1/', include('api.urls.urls', namespace='api')),
     path('social-auth/', include('social_django.urls', namespace='social')),
 ]
