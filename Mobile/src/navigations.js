@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { AuthContext } from "./context/AuthContext";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { AuthContext } from "./context/AuthContext";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Screens
@@ -14,28 +14,41 @@ import { SettingsScreen } from "./screens/Settings"
 import { CourceScreen } from "./screens/Courses/Cource-Info";
 
 export function Navigation() {
-    const Stack = createStackNavigator()
     const {userInfo} = useContext(AuthContext)
-
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                {userInfo.token ? 
+            {userInfo.token ? 
                 (
-                    <>
-                        <Stack.Screen name="Start" component={TabNavigations} options={{headerShown: false}}/>
-                        <Stack.Screen name="Settings" component={SettingsScreen} options={{headerShown: false}}/>
-                    </>
+                    <Program_Navigation/>
                 )
                 :
                 (
-                    <>
-                        <Stack.Screen name="Login" component={Login} options={{headerShown: false}} />
-                        <Stack.Screen name="Reg" component={Registration} options={{headerShown: false}}/>
-                    </>
-                )}
-            </Stack.Navigator>
+                    <Login_Navigation/>
+                )
+            }
         </NavigationContainer>
+    );
+};
+
+function Login_Navigation() {
+    const Stack = createStackNavigator()
+
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="Login" component={Login} options={{headerShown: false}} />
+            <Stack.Screen name="Reg" component={Registration} options={{headerShown: false}}/>
+        </Stack.Navigator>
+    );
+};
+
+function Program_Navigation() {
+    const Stack = createStackNavigator()
+
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="Start" component={TabNavigations} options={{headerShown: false}}/>
+            <Stack.Screen name="Settings" component={SettingsScreen} options={{headerShown: false}}/>
+        </Stack.Navigator>
     );
 };
 
@@ -66,7 +79,7 @@ function TabNavigations() {
             },
             })}
         >
-        <Tab.Screen name="Каталог" component={HomeScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Каталог" component={CatalogScreen} options={{headerShown: false}}/>
         <Tab.Screen name="Профиль" component={ProfileScreen} options={{headerShown: false}}/>
       </Tab.Navigator>
     );
@@ -76,8 +89,8 @@ function CatalogScreen() {
     const Stack = createStackNavigator()
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Catalog" component={CatalogScreen}/>
-            <Stack.Screen name="Course" component={CourceScreen}/>
+            <Stack.Screen name="Catalog" component={HomeScreen} options={{headerShown: false}}/>
+            <Stack.Screen name="Course" component={CourceScreen} />
         </Stack.Navigator>
     );
 };

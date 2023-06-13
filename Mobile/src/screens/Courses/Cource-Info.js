@@ -8,7 +8,7 @@ import { Global, Cource } from '../../../styles/style';
 export function CourceScreen({navigation}) {
     return (
         <View style={Global.container}>
-            <View style={Course}>
+            <View>
             </View>
         </View>
     );
