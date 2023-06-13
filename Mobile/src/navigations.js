@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AuthContext } from "./context/AuthContext";
+import { CourseProvider } from "./context/CourseContext";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Screens
@@ -90,7 +91,20 @@ function CatalogScreen() {
     return (
         <Stack.Navigator>
             <Stack.Screen name="Catalog" component={HomeScreen} options={{headerShown: false}}/>
-            <Stack.Screen name="Course" component={CourceScreen} />
+            {/* <CourseProvider>
+                <CouseLayoutCourse/>
+            </CourseProvider>        */}
         </Stack.Navigator>
     );
 };
+
+// function CouseLayoutCourse() {
+//     const Stack = createStackNavigator()
+//     return (
+//         <NavigationContainer>
+//             <Stack.Navigator>
+//                 <Stack.Screen name="Course" component={CourceScreen} />
+//             </Stack.Navigator>
+//         </NavigationContainer>
+//     );
+// };
