@@ -352,3 +352,44 @@ export const ScreenSettings = StyleSheet.create({
         fontSize: 16,
     },
 });
+
+export const Course = StyleSheet.create({
+    container: {
+        paddingTop: 50,
+        height: 1000,
+    },
+
+    title: {
+        fontSize:22,
+        marginBottom: 20,
+    },
+
+    image: {
+        width: 50,
+        height: 50,
+    },  
+
+    description: {
+        fontSize: 18,
+        marginBottom: 5,
+    },
+
+    btncontainer: {
+        flexDirection: "row",
+        marginBottom: 30,
+    }, 
+
+    btnback: {
+        width: 150,
+        height: 40,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    
+    btn: {
+        width: 150,
+        height: 40, 
+        alignItems: "center",
+        justifyContent: "center",
+    },
+});

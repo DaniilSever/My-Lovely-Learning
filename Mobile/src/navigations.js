@@ -47,7 +47,7 @@ function Program_Navigation() {
 
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Start" component={TabNavigations} options={{headerShown: false}}/>
+            <Stack.Screen name="Start" component={CatalogScreen} options={{headerShown: false}}/>
             <Stack.Screen name="Settings" component={SettingsScreen} options={{headerShown: false}}/>
         </Stack.Navigator>
     );
@@ -80,7 +80,7 @@ function TabNavigations() {
             },
             })}
         >
-        <Tab.Screen name="Каталог" component={CatalogScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Каталог" component={HomeScreen} options={{headerShown: false}}/>
         <Tab.Screen name="Профиль" component={ProfileScreen} options={{headerShown: false}}/>
       </Tab.Navigator>
     );
@@ -89,22 +89,11 @@ function TabNavigations() {
 function CatalogScreen() {
     const Stack = createStackNavigator()
     return (
-        <Stack.Navigator>
-            <Stack.Screen name="Catalog" component={HomeScreen} options={{headerShown: false}}/>
-            {/* <CourseProvider>
-                <CouseLayoutCourse/>
-            </CourseProvider>        */}
-        </Stack.Navigator>
+        <CourseProvider>
+            <Stack.Navigator>
+                <Stack.Screen name="Home" component={TabNavigations} options={{headerShown: false}}/>
+                <Stack.Screen name="Курс" component={CourceScreen}/>
+            </Stack.Navigator>
+        </CourseProvider>
     );
 };
-
-// function CouseLayoutCourse() {
-//     const Stack = createStackNavigator()
-//     return (
-//         <NavigationContainer>
-//             <Stack.Navigator>
-//                 <Stack.Screen name="Course" component={CourceScreen} />
-//             </Stack.Navigator>
-//         </NavigationContainer>
-//     );
-// };
