@@ -29,11 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['my-lovely-learning.ru', 'www.my-lovely-learning.ru', 'localhost', '127.0.0.1']
 
-SOCIAL_AUTH_GITHUB_KEY = '89a11e03f90d8445a20d'
-SOCIAL_AUTH_GITHUB_SECRET = 'a9821f0a3fac5d39fcf073a6af2ea8a684bdd8d0'
-
-SOCIAL_AUTH_VK_OAUTH2_KEY = '51629638'
-SOCIAL_AUTH_VK_OAUTH2_SECRET = 'rol5YZhp3pGGbvgutnP6'
 
 # Application definition
 
