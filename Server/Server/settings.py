@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['my-lovely-learning.ru', 'www.my-lovely-learning.ru', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -122,7 +122,6 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.vk.VKOAuth2',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://my-lovely-learning.ru']
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
