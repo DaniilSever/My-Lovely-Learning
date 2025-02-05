@@ -40,5 +40,3 @@ BackEnd:
 Users accessing the site before starting a course must register an account. An account is required to save and track uncompleted courses, as well as favorite courses that the user may want to take in the future.
 * Teachers:
 Users who are willing to share their knowledge can do so by going to the course builder. In the course builder it is possible to build a convenient, and most importantly not information-intensive training from the proposed blocks. After creating a course, it goes to the administration for testing and evaluation. After that it goes to the open access.
-
-Translated with DeepL.com (free version)
