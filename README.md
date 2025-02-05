@@ -9,6 +9,7 @@ FrontEnd:
 - HTML
 - CSS
 - JS
+
 BackEnd:
 - Python 
 - Framework Django / Django REST framework
@@ -31,6 +32,7 @@ FrontEnd:
 - HTML
 - CSS
 - JS
+
 BackEnd:
 - Python 
 - Django Framework / Django REST framework
